@@ -1,74 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="help.meta_title">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help - Translate Before Search</title>
-  <meta name="description" content="Help, setup, and troubleshooting for Translate Before Search.">
+  <meta name="description" content="Help, setup, and troubleshooting for Translate Before Search." data-i18n="help.meta_description">
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js"></script>
+  <script src="i18n.js" defer></script>
 </head>
-<body>
+<body data-page="help">
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Translate Before Search</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="help.html">Help</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
+      <a class="brand" href="index.html" data-i18n="common.brand">Translate Before Search</a>
+      <div class="header-actions">
+        <nav>
+          <a href="index.html" data-i18n="common.nav_home">Home</a>
+          <a href="about.html" data-i18n="common.nav_about">About</a>
+          <a class="active" href="help.html" data-i18n="common.nav_help">Help</a>
+          <a href="privacy.html" data-i18n="common.nav_privacy">Privacy</a>
+        </nav>
+        <label class="language-switcher">
+          <span data-i18n="common.language_label">Language</span>
+          <select data-lang-switcher aria-label="Language selector"></select>
+        </label>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <span class="eyebrow">Help</span>
-      <h1>Setup and everyday use</h1>
-      <p class="lead">Most features are available directly from the extension popup on supported search pages.</p>
+      <span class="eyebrow" data-i18n="help.hero_eyebrow">Help</span>
+      <h1 data-i18n="help.hero_title">Quick guide: setup and everyday use</h1>
+      <p class="lead" data-i18n="help.hero_lead">Most controls live in the extension popup, and auto-translate is ready only on supported search pages.</p>
     </section>
 
     <section class="section grid">
       <article class="panel">
-        <h2>Get started</h2>
+        <h2 data-i18n="help.start_title">Get started fast</h2>
         <ol>
-          <li>Install Translate Before Search and enable it in Safari.</li>
-          <li>Open a supported search engine results page.</li>
-          <li>Choose your target language in the extension popup.</li>
-          <li>Leave auto-translate on, or translate manually when needed.</li>
+          <li data-i18n="help.start_item1">Install Translate Before Search and enable it in Safari.</li>
+          <li data-i18n="help.start_item2">Open a supported search page.</li>
+          <li data-i18n="help.start_item3">Choose your target language in the popup.</li>
+          <li data-i18n="help.start_item4">Leave auto-translate on if you want it ready by default, or switch the site to manual-only when you want more control.</li>
         </ol>
       </article>
       <article class="panel">
-        <h2>Useful settings</h2>
+        <h2 data-i18n="help.controls_title">Core controls</h2>
         <ul>
-          <li><strong>Target language:</strong> choose which language the query should be translated into.</li>
-          <li><strong>Open results in:</strong> current tab or new tab.</li>
-          <li><strong>Skip same language:</strong> avoid translating when the query already looks like the target language.</li>
-          <li><strong>Ignored languages:</strong> keep auto-translate from running on selected query languages.</li>
-          <li><strong>Site mode:</strong> keep a site in manual-only mode if you do not want automatic translation there.</li>
+          <li data-i18n="help.controls_item1" data-i18n-html="true"><strong>Target language:</strong> choose which language the query should be translated into.</li>
+          <li data-i18n="help.controls_item2" data-i18n-html="true"><strong>Open results in:</strong> current tab or new tab.</li>
+          <li data-i18n="help.controls_item3" data-i18n-html="true"><strong>Skip same language:</strong> avoid translating when the query already looks like the target language.</li>
+          <li data-i18n="help.controls_item4" data-i18n-html="true"><strong>Ignored languages:</strong> keep auto-translate from running on selected query languages.</li>
+          <li data-i18n="help.controls_item5" data-i18n-html="true"><strong>Site mode:</strong> keep a site in manual-only mode if you do not want automatic translation there.</li>
         </ul>
       </article>
       <article class="panel">
-        <h2>Troubleshooting</h2>
+        <h2 data-i18n="help.next_title">What to do next if it does not work</h2>
         <ul>
-          <li>If nothing happens, confirm you are on a supported search results page.</li>
-          <li>If you prefer less automation, turn off auto-translate and use manual translation only.</li>
-          <li>If a query should not translate automatically, add that language to ignored languages or set the site to manual-only mode.</li>
+          <li data-i18n="help.next_item1">If nothing happens, first confirm you are on a supported search page.</li>
+          <li data-i18n="help.next_item2" data-i18n-html="true">If the popup says <strong>manual-only</strong>, turn auto-translate back on globally or switch the current site back to <strong>Follow global</strong>.</li>
+          <li data-i18n="help.next_item3" data-i18n-html="true">If a query should not translate automatically, add that language to <strong>Ignored languages</strong> or set the site to <strong>manual-only</strong>.</li>
+          <li data-i18n="help.next_item4">If translation fails temporarily, try manual translate once, then retry from the same supported search page.</li>
         </ul>
       </article>
     </section>
 
     <section class="section panel">
-      <h2>Compatibility note</h2>
-      <p>A legacy <code>how_to_use.html</code> page is kept for compatibility and forwards to this help page.</p>
+      <h2 data-i18n="help.more_title">Need more help?</h2>
+      <p data-i18n="help.more_hint">The popup also includes a short “What to do next” hint that changes with the current page state.</p>
+      <p><span data-i18n="help.more_contact_prefix">If you run into issues or need product support, contact </span><a href="mailto:cameoshell09@gmail.com" data-skip-lang="true">cameoshell09@gmail.com</a><span data-i18n="help.more_contact_suffix">.</span></p>
+      <p class="small" data-i18n="help.more_legacy" data-i18n-html="true">A legacy <code>how_to_use.html</code> page is kept for compatibility and forwards to this help page.</p>
     </section>
   </main>
 
   <footer class="container site-footer">
-    <div>© Translate Before Search</div>
+    <div data-i18n="common.footer_copyright">© Translate Before Search</div>
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
+      <a href="index.html" data-i18n="common.footer_home">Home</a>
+      <a href="about.html" data-i18n="common.footer_about">About</a>
+      <a href="privacy.html" data-i18n="common.footer_privacy">Privacy</a>
     </div>
   </footer>
 </body>

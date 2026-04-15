@@ -1,67 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="about.meta_title">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Translate Before Search</title>
-  <meta name="description" content="How Translate Before Search works and what it is designed for.">
+  <meta name="description" content="How Translate Before Search works and what it is designed for." data-i18n="about.meta_description">
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js"></script>
+  <script src="i18n.js" defer></script>
 </head>
-<body>
+<body data-page="about">
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Translate Before Search</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a class="active" href="about.html">About</a>
-        <a href="help.html">Help</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
+      <a class="brand" href="index.html" data-i18n="common.brand">Translate Before Search</a>
+      <div class="header-actions">
+        <nav>
+          <a href="index.html" data-i18n="common.nav_home">Home</a>
+          <a class="active" href="about.html" data-i18n="common.nav_about">About</a>
+          <a href="help.html" data-i18n="common.nav_help">Help</a>
+          <a href="privacy.html" data-i18n="common.nav_privacy">Privacy</a>
+        </nav>
+        <label class="language-switcher">
+          <span data-i18n="common.language_label">Language</span>
+          <select data-lang-switcher aria-label="Language selector"></select>
+        </label>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <span class="eyebrow">Product overview</span>
-      <h1>A small tool for broader search.</h1>
-      <p class="lead">Translate Before Search is built for moments when the best answer may exist in another language, but switching your query manually every time is too much friction.</p>
+      <span class="eyebrow" data-i18n="about.hero_eyebrow">Product overview</span>
+      <h1 data-i18n="about.hero_title">A small tool for broader search.</h1>
+      <p class="lead" data-i18n="about.hero_lead">Translate Before Search is built for moments when the best answer may exist in another language, but switching your query manually every time is too much friction.</p>
     </section>
 
     <section class="section grid">
       <article class="panel">
-        <h2>What it does</h2>
-        <p>On supported search pages, the extension translates your query into a target language before opening results. You can also trigger translation manually when you want more control.</p>
+        <h2 data-i18n="about.what_title">What it does</h2>
+        <p data-i18n="about.what_body">On supported search pages, the extension can auto-translate your query into a target language before opening results. You can also switch to manual-only control when you want more control.</p>
       </article>
       <article class="panel">
-        <h2>What it is for</h2>
-        <p>It helps with multilingual research, browsing, learning, and everyday searching when relevant information may be written in a different language.</p>
+        <h2 data-i18n="about.for_title">What it is for</h2>
+        <p data-i18n="about.for_body">It helps with multilingual research, browsing, learning, and everyday searching when relevant information may be written in a different language.</p>
       </article>
       <article class="panel">
-        <h2>What it is not</h2>
-        <p>It is not trying to replace your search engine or force automation everywhere. The goal is to reduce friction while letting you decide when translation should step in.</p>
+        <h2 data-i18n="about.not_title">What it is not</h2>
+        <p data-i18n="about.not_body">It is not trying to replace your search engine or force automation everywhere. The goal is to reduce friction while letting you decide when translation should step in.</p>
       </article>
     </section>
 
     <section class="section panel">
-      <h2>Core controls</h2>
+      <h2 data-i18n="about.controls_title">Core controls</h2>
       <ul>
-        <li>Set a target language for translated searches.</li>
-        <li>Switch quickly between recent target languages.</li>
-        <li>Open translated results in the current tab or a new tab.</li>
-        <li>Skip searches that already appear to be in the target language.</li>
-        <li>Keep selected sites in manual-only mode.</li>
-        <li>Exclude specific query languages from auto-translation.</li>
+        <li data-i18n="about.controls_item1">Set a target language for translated searches.</li>
+        <li data-i18n="about.controls_item2">Switch quickly between recent target languages.</li>
+        <li data-i18n="about.controls_item3">Open translated results in the current tab or a new tab.</li>
+        <li data-i18n="about.controls_item4">Skip searches that already appear to be in the target language.</li>
+        <li data-i18n="about.controls_item5">Keep selected sites in manual-only mode.</li>
+        <li data-i18n="about.controls_item6">Exclude specific query languages from auto-translation.</li>
       </ul>
-      <p class="small">For setup steps and troubleshooting, go to <a href="help.html">Help</a>.</p>
+      <p class="small"><span data-i18n="about.controls_help_prefix">For setup steps and troubleshooting, go to </span><a href="help.html" data-i18n="about.controls_help_link">Help</a><span data-i18n="about.controls_help_suffix">.</span></p>
     </section>
   </main>
 
   <footer class="container site-footer">
-    <div>© Translate Before Search</div>
+    <div data-i18n="common.footer_copyright">© Translate Before Search</div>
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="help.html">Help</a>
-      <a href="privacy.html">Privacy</a>
+      <a href="index.html" data-i18n="common.footer_home">Home</a>
+      <a href="help.html" data-i18n="common.footer_help">Help</a>
+      <a href="privacy.html" data-i18n="common.footer_privacy">Privacy</a>
     </div>
   </footer>
 </body>

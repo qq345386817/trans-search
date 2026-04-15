@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="how_to_use.meta_title">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=help.html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting to Help - Translate Before Search</title>
+  <meta name="description" content="Legacy help page redirect for Translate Before Search." data-i18n="how_to_use.meta_description">
   <link rel="canonical" href="help.html">
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js"></script>
+  <script src="i18n.js" defer></script>
 </head>
-<body>
-  <main class="container" style="padding-top: 72px;">
+<body data-page="how_to_use">
+  <main class="container redirect-page">
     <section class="panel">
-      <h1>Redirecting to Help</h1>
-      <p>This page has moved to <a href="help.html">help.html</a>.</p>
+      <h1 data-i18n="how_to_use.heading">Redirecting to Help</h1>
+      <p><span data-i18n="how_to_use.body_prefix">This page has moved to </span><a href="help.html" data-redirect-link data-i18n="how_to_use.body_link">help.html</a><span data-i18n="how_to_use.body_suffix">.</span></p>
+      <p class="small" data-i18n="how_to_use.auto_redirect">If you are not redirected automatically, use the link above.</p>
     </section>
   </main>
 </body>

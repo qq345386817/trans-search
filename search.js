@@ -16,12 +16,10 @@ if (form) {
   let requestId = 0;
   let controller;
   let timer;
+  const toolMessages = JSON.parse(document.getElementById('tool-copy').textContent);
 
   function message(key, substitutions = []) {
-    const lang = document.documentElement.lang;
-    const config = window.TRANS_SEARCH_I18N;
-    const dictionary = config?.translations?.[lang]?.tool || config?.pages?.tool || {};
-    const value = dictionary[key] || config?.pages?.tool?.[key] || key;
+    const value = toolMessages[key] || key;
     return value.replace(/\$(\d+)/g, (_, index) => substitutions[Number(index) - 1] || '');
   }
 

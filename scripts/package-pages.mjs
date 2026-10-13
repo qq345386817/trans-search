@@ -4,7 +4,7 @@ import { load } from 'cheerio';
 
 const publicFiles = [
   'index.html', 'about.html', 'help.html', 'privacy.html', 'faq.html', 'how_to_use.html',
-  'styles.css', 'translations.js', 'i18n.js', 'search.js', 'search-core.js',
+  'styles.css', 'i18n.js', 'search.js', 'search-core.js',
   'robots.txt', 'sitemap.xml', 'llms.txt', 'zh-Hans', 'zh-Hant',
 ];
 fs.rmSync('dist', { recursive: true, force: true });

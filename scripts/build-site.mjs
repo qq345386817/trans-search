@@ -28,6 +28,9 @@ const sitemap=[];
 for (const locale of locales) for (const page of [...pages,'how_to_use']) {
   const filename=locale.prefix+page+'.html';
   const $=load(fs.readFileSync('_templates/'+page+'.html','utf8'));
+  // Text is prerendered; the browser only needs this locale's tool messages.
+  $('script[src="translations.js"]').remove();
+  if (page === 'index') $('head').append($('<script type="application/json" id="tool-copy">').text(JSON.stringify(copy.translations[locale.lang]?.tool || copy.pages.tool).replace(/</g, '\\u003c')));
   $('html').attr('lang',locale.lang).attr('data-page-name',page);
   $('body').attr('data-lang',locale.lang);
   $('[data-i18n]').each((_,element) => {

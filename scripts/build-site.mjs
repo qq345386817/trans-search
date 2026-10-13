@@ -40,6 +40,7 @@ for (const locale of locales) for (const page of [...pages,'how_to_use']) {
   $('title').text(getCopy(locale.lang,`${page}.meta_title`));
   for (const selector of ['link[rel="stylesheet"]','script[src]']) $(selector).each((_,element)=>{ const node=$(element);const attribute=element.tagName==='link'?'href':'src';node.attr(attribute,(locale.prefix?'../':'')+node.attr(attribute)); });
   $('link[rel="canonical"],link[rel="alternate"],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"],script#language-urls').remove();
+  if (configuration.googleSiteVerification) $('head').append($('<meta name="google-site-verification">').attr('content', configuration.googleSiteVerification));
   const pageUrl=canonical(locale,page==='how_to_use'?'help':page);
   $('head').append($('<link rel="canonical">').attr('href',pageUrl));
   for(const alternate of locales) $('head').append($('<link rel="alternate">').attr({hreflang:alternate.hrefLang,href:canonical(alternate,page==='how_to_use'?'help':page)}));

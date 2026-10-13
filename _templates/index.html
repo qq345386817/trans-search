@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en" data-i18n-title="index.meta_title"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translate &amp; Search</title>
+  <meta name="description" content="Translate &amp; Search helps you search across languages before results open." data-i18n="index.meta_description">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js"></script>
+  <script src="i18n.js" defer=""></script>
+<script type="module" src="search.js"></script></head>
+<body data-page="index"><a href="#main-content" class="skip-link" data-i18n="common.skip_content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" data-i18n="common.brand">Translate &amp; Search</a>
+      <div class="header-actions">
+        <nav>
+          <a class="active" href="index.html" data-i18n="common.nav_home" aria-current="page">Home</a>
+          <a href="about.html" data-i18n="common.nav_about">About</a>
+          <a href="help.html" data-i18n="common.nav_help">Help</a>
+          <a href="privacy.html" data-i18n="common.nav_privacy">Privacy</a>
+        <a href="faq.html" data-i18n="common.nav_faq">FAQ</a></nav>
+        <label class="language-switcher">
+          <span data-i18n="common.language_label">Language</span>
+          <select data-lang-switcher="" aria-label="Language selector"></select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="main-content">
+    <section class="hero">
+      <span class="eyebrow" data-i18n="index.hero_eyebrow">Browser extension with a companion app</span>
+      <h1 data-i18n="index.hero_title">Search across languages, without breaking your flow.</h1>
+      <p class="lead" data-i18n="index.hero_lead">Translate &amp; Search translates your query before results open, so it is easier to reach information that may be clearer, newer, or more complete in another language.</p>
+
+    <section id="search-tool" class="search-workbench" aria-labelledby="tool-title">
+<h2 id="tool-title" data-i18n="tool.title">Translate a search query online</h2>
+
+<form id="search-form" action="https://www.google.com/search" method="get" target="_blank">
+ <label class="field" for="search-query"><span data-i18n="tool.query_label">Your search query</span><textarea id="search-query" dir="auto" name="q" rows="2" maxlength="300" required="" placeholder="For example: Safari extension debugging" data-i18n-placeholder="tool.query_placeholder" autocomplete="off" spellcheck="false"></textarea></label>
+ <div class="search-controls">
+  <label class="field" for="source-language"><span data-i18n="tool.source_label">From</span><select id="source-language"><option value="auto" data-i18n="tool.auto">Detect language</option><option value="en">English</option><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="ru">Русский</option><option value="pt">Português</option><option value="it">Italiano</option><option value="ar">العربية</option></select></label>
+  <label class="field" for="target-language"><span data-i18n="tool.target_label">Translate into</span><select id="target-language"><option value="en">English</option><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="ru">Русский</option><option value="pt">Português</option><option value="it">Italiano</option><option value="ar">العربية</option></select></label>
+  <label class="field" for="search-engine"><span data-i18n="tool.engine_label">Search engine</span><select id="search-engine"><option value="google">Google</option><option value="bing">Bing</option><option value="baidu">Baidu / 百度</option><option value="sogou">Sogou / 搜狗</option></select></label>
+ </div>
+ <div class="search-actions"><button class="button" id="translate-query" type="submit" data-i18n="tool.translate_button">Translate query</button><a id="original-search-link" class="button-secondary" target="_blank" rel="noopener noreferrer" hidden="" data-i18n="tool.original_button">Search original</a></div>
+ <p id="search-status" class="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
+ <div id="search-preview" class="search-preview" hidden="">
+  <label class="field" for="translated-query"><span data-i18n="tool.translated_label">Review or edit the translated query</span><textarea id="translated-query" dir="auto" rows="2" maxlength="600" placeholder="You can also paste your own translation here." data-i18n-placeholder="tool.translated_placeholder" spellcheck="false"></textarea></label>
+  <div class="search-actions"><a id="translated-search-link" class="button" target="_blank" rel="noopener noreferrer" hidden="" data-i18n="tool.translated_button">Search translated query</a><button id="copy-translation" class="button-secondary" type="button" disabled="" data-i18n="tool.copy_button">Copy translation</button></div>
+ </div>
+ <noscript><style>#translate-query,.search-controls{display:none}</style><p data-i18n="tool.no_js">JavaScript is needed for automatic translation. You can still search the original query directly.</p><button type="submit" class="button-secondary" data-i18n="tool.original_button">Search original</button></noscript>
+</form>
+<div class="example-queries"><span class="small" data-i18n="tool.examples_label">Try an example</span><button type="button" data-example-query="Safari 扩展调试方法" data-target-language="en" data-i18n="tool.example_developer">Developer research</button><button type="button" data-example-query="机器学习入门教程" data-target-language="en" data-i18n="tool.example_learning">Learning resources</button><button type="button" data-example-query="Japanese garden design" data-target-language="ja" data-i18n="tool.example_japanese">English to Japanese</button></div>
+<p class="small tool-privacy" data-i18n="tool.privacy_note">Translation sends your query to Google. Searching sends it to the selected engine. No account or query history is saved by this website.</p>
+<p class="small" data-i18n="tool.limitation">This translates the query, not the results page. Translation service availability can vary.</p></section></section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2 data-i18n="index.why_title">Why this exists</h2>
+        <p class="small" data-i18n="index.why_intro">Useful information is not distributed evenly across the web. Some topics are better covered in different languages, and searching in only one language can leave good results behind.</p>
+      </div>
+      <div class="grid">
+        <article class="panel">
+          <h3 data-i18n="index.card1_title">Translate before results open</h3>
+          <p data-i18n="index.card1_body">Skip the usual copy, switch, and paste routine. On supported search pages, the extension can translate your query automatically before the destination results load.</p>
+        </article>
+        <article class="panel">
+          <h3 data-i18n="index.card2_title">Keep manual control</h3>
+          <p data-i18n="index.card2_body">If you prefer a lighter touch, you can translate manually, keep certain sites in manual-only mode, and still use the extension only when it helps.</p>
+        </article>
+        <article class="panel">
+          <h3 data-i18n="index.card3_title">Adjust it to your workflow</h3>
+          <p data-i18n="index.card3_body">Choose where results open, switch between recent target languages, skip same-language searches, and ignore selected query languages when needed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section panel">
+      <h2 data-i18n="index.supported_title">Supported search pages</h2>
+      <p data-i18n="index.supported_body">Translate &amp; Search runs as a browser extension, with an Apple app + extension setup in the Safari world, and also works in Chromium browsers such as Chrome and Edge. It supports major search engines including Google, Bing, Baidu, and Sogou, plus other supported search result pages as the extension evolves.</p>
+      <div class="inline-links">
+        <a href="about.html" data-i18n="index.supported_overview">Product overview</a>
+        <a href="help.html#try-now" data-i18n="index.supported_setup">Setup and usage</a>
+        <a href="privacy.html" data-i18n="index.supported_privacy">Privacy policy</a>
+      </div>
+    </section>
+  <section class="section panel" id="app"><h2 data-i18n="index.app_title">Use it in your everyday browser workflow</h2><p data-i18n="index.app_body">The app and browser extension are in development.</p><div class="hero-actions"><a class="button-secondary" href="help.html" data-i18n="index.app_guide">App &amp; extension guide</a><a class="button-secondary" href="mailto:cameoshell09@gmail.com?subject=Translate%20%26%20Search%20test%20version" data-skip-lang="true" data-i18n="index.app_contact">Ask about a test version</a></div></section></main>
+
+  <footer class="container site-footer">
+    <div data-i18n="common.footer_copyright">© Translate &amp; Search</div>
+    <div class="footer-links">
+      <a href="index.html" data-i18n="common.footer_home">Home</a>
+      <a href="about.html" data-i18n="common.footer_about">About</a>
+      <a href="help.html" data-i18n="common.footer_help">Help</a>
+      <a href="privacy.html" data-i18n="common.footer_privacy">Privacy</a>
+    <a href="faq.html" data-i18n="common.footer_faq">FAQ</a></div>
+  </footer>
+
+
+
+</body></html>

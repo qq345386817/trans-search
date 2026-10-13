@@ -289,3 +289,44 @@ code {
     justify-content: space-between;
   }
 }
+
+[hidden] { display: none !important; }
+button, input, textarea, select { font: inherit; }
+button, select { cursor: pointer; }
+button:disabled { cursor: wait; opacity: 0.65; }
+button:focus-visible, a:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--accent); outline-offset: 3px;
+}
+.skip-link { position: absolute; top: -80px; left: 16px; z-index: 30; background: white; padding: 8px 12px; }
+.skip-link:focus { top: 8px; }
+.search-workbench { margin-top: 28px; }
+.search-workbench h2 { font-size: 1.25rem; }
+.field { display: flex; flex-direction: column; gap: 6px; font-weight: 600; min-width: 0; }
+.field textarea, .field select { width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; color: var(--text); background: var(--surface); font-weight: 400; }
+.field textarea { resize: vertical; line-height: 1.5; }
+.search-controls { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 14px; }
+.search-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.search-status { margin: 12px 0 0; color: var(--muted); }
+.search-status:empty { display: none; }
+.search-preview { margin-top: 18px; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); }
+.example-queries { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 18px 0 12px; }
+.example-queries button { background: var(--surface-soft); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; color: var(--text); min-height: 36px; }
+.tool-privacy { margin-bottom: 8px; }
+.search-workbench .small { font-size: 0.875rem; }
+@media (max-width: 560px) {
+  main { padding-top: 24px; }
+  .hero { padding: 24px 18px; }
+  .search-controls { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  .search-controls .field:last-child { grid-column: 1 / -1; }
+  .search-actions .button, .search-actions .button-secondary { flex: 1; }
+  .search-preview { padding: 12px; }
+  nav { gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (max-width: 560px) {
+  .header-inner { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 12px 0; min-height: 0; }
+  .header-actions { display: contents; }
+  .brand { grid-column: 1; grid-row: 1; }
+  .language-switcher { grid-column: 2; grid-row: 1; font-size: 0.875rem; }
+  nav { grid-column: 1 / -1; grid-row: 2; font-size: 0.875rem; }
+}

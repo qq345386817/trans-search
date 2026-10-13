@@ -1,0 +1,21 @@
+# Translate & Search
+
+> An online search-query translation tool and a browser-extension project for cross-language search.
+
+The website translates user-entered queries with Google’s web translation endpoint, lets the user edit the translation, and opens Google, Bing, Baidu, or Sogou in a separate tab. It does not translate entire results pages or guarantee better results. No account or saved query-history database is used. Queries are sent to third-party services; hosting access logs may exist.
+
+The companion app and Safari/Chromium extension are in development and have not officially launched. The extension can automatically or manually translate queries on supported search results pages; the companion Apple app helps enable the Safari extension.
+
+## Main pages
+
+- [Online tool](https://trans-search.luopeike.com/): English tool and product overview.
+- [简体中文工具](https://trans-search.luopeike.com/zh-Hans/): Chinese-language tool and overview.
+- [繁體中文工具](https://trans-search.luopeike.com/zh-Hant/): Traditional Chinese tool and overview.
+- [FAQ](https://trans-search.luopeike.com/faq): Scope, usage, privacy, limitations, and troubleshooting.
+- [App and extension](https://trans-search.luopeike.com/about): Product capabilities and development status.
+- [Help](https://trans-search.luopeike.com/help): Browser-extension setup and usage.
+- [Privacy](https://trans-search.luopeike.com/privacy): Query processing, local extension storage, and third-party services.
+
+## Source
+
+- [Website source](https://github.com/qq345386817/trans-search): Website implementation.

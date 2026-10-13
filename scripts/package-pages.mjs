@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+
+const publicFiles = [
+  'index.html', 'about.html', 'help.html', 'privacy.html', 'faq.html', 'how_to_use.html',
+  'styles.css', 'i18n.js', 'search.js', 'search-core.js',
+  'robots.txt', 'sitemap.xml', 'llms.txt', 'zh-Hans', 'zh-Hant',
+];
+fs.rmSync('dist', { recursive: true, force: true });
+fs.mkdirSync('dist');
+for (const file of publicFiles) fs.cpSync(file, `dist/${file}`, { recursive: true });
+// A real 404 prevents nonexistent paths from looking like duplicate homepages.
+fs.writeFileSync('dist/404.html', '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found | Translate & Search</title><h1>Page not found</h1><p><a href="/">Return to Translate &amp; Search</a></p></html>\n');
+console.log('Packaged public website into dist/');

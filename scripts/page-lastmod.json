@@ -1,74 +1,74 @@
 {
   "index.html": {
-    "hash": "fa1caf571de373446fbe592b087e74e7c3c089416f34784de2cc21db3c3ced43",
+    "hash": "bba723a2473e033bad6254cfaa355e158cb461847a6fd23c60f0b20d89ed4e38",
     "date": "2026-10-13"
   },
   "about.html": {
-    "hash": "68f68e38802319054688bc801af9a4a797ef4728292c4dbb5856237c5ae9628e",
+    "hash": "75d7a35c1b7d8f367f89e25b39729dce2ddbddecbe217ce7946ced199d566ed9",
     "date": "2026-10-13"
   },
   "help.html": {
-    "hash": "c255cf54d60cb1ecb32583a079cc2b8b57b76c707c80519a572894ae700feb5b",
+    "hash": "7581ccfd4b07dc586600b6534f455dc56261fb203595f36e4f43f0d54f85e9cc",
     "date": "2026-10-13"
   },
   "privacy.html": {
-    "hash": "dedc38359734952b824213214fc2b7a031827eccd0c28438aa4724c0227c7d8b",
+    "hash": "51a3ce144dfca50217daafaba51e4bd21b0de6962cd0ef5aa9f70ef929f34724",
     "date": "2026-10-13"
   },
   "faq.html": {
-    "hash": "70f4fdebcbfcbcff88208cc1e56694102cbfe19356ad730132d4350f56188a27",
+    "hash": "8d0fd4fca2fcbe0764260384c1518db6608d76fcb2c07951c3812c39ca2f76b5",
     "date": "2026-10-13"
   },
   "how_to_use.html": {
-    "hash": "9cea55f89d719a0145dfdf0a7e3073554389cb43d2524a8997c572a0d1f824d2",
+    "hash": "fa743da344ed9dde8ddbbd807625936611b95f13cf8930c0d35776db8dbd345d",
     "date": "2026-10-13"
   },
   "zh-Hans/index.html": {
-    "hash": "048a7c25cb6bba4c8f6b2dc11a8c08f9bc8b425597412949516184f8cc5a98e8",
+    "hash": "4199c51091d9209007ea59847c84026f606a755064ca5f4132fdbe7972e6bdda",
     "date": "2026-10-13"
   },
   "zh-Hans/about.html": {
-    "hash": "cbe87838eba878c64810ba58249ea9a25b436cc608b4f83a53411de30dc39eaf",
+    "hash": "979a054d25f49094b48aa133d15c0abf941642da309816695ba80ababe847243",
     "date": "2026-10-13"
   },
   "zh-Hans/help.html": {
-    "hash": "925e6b7a6f134f8b527213be93cc1e7ecd98f11ef28aef882ae3f80d12c43008",
+    "hash": "d9f4c8bdf271e3460f08202c1fcafe2a2873cdba3371c48623c74bae932f50db",
     "date": "2026-10-13"
   },
   "zh-Hans/privacy.html": {
-    "hash": "cbc726c5b6d787430e442b9f06fd13f2122716c3d62d890b7a6571a133e9ef63",
+    "hash": "f6092e6d14ae1308a02be2479ca0528e4318b80f94025970388a2635ea9fd9e0",
     "date": "2026-10-13"
   },
   "zh-Hans/faq.html": {
-    "hash": "ff6eafb69b83fab1577360d0782f4e32c152901999260b172668f0d160061d55",
+    "hash": "a89ef0bcd5fb85224cb0d4664c071c915058f3fdcc8ee98b467cdb2194defe23",
     "date": "2026-10-13"
   },
   "zh-Hans/how_to_use.html": {
-    "hash": "d956fefcf43bc9e25ef03aae6b0dbf9fc697513b4454e072b5750c368e8837b9",
+    "hash": "cded8acc39c15bcb1d853ff50af2a5f3f5cbf06260b883d3458c15ed474b87b9",
     "date": "2026-10-13"
   },
   "zh-Hant/index.html": {
-    "hash": "4016751f02bc4fb9766e629bba5445a837d906be209dcd214f63cc63ffa03d1c",
+    "hash": "c5b85752171e223022880e95ae9747807e6d2e33e7757d5ff2dc56faa828c2f6",
     "date": "2026-10-13"
   },
   "zh-Hant/about.html": {
-    "hash": "1e4cf90f6b3c1de8960672f9c949de108532a2998377de7d5656fc8d1a388ea6",
+    "hash": "c085783e64b95432f04f5399e2ababeeff98dfadd4cf430df39276078eb0a1ae",
     "date": "2026-10-13"
   },
   "zh-Hant/help.html": {
-    "hash": "11286b7ddeb05af24ececc518ab21e4bdca101f73e1819b4da6527d5767e611c",
+    "hash": "b00b2eb9df96628b7c2d865330e77b40eb19bbfce7f739534b5c8877abec9851",
     "date": "2026-10-13"
   },
   "zh-Hant/privacy.html": {
-    "hash": "704a7ad95564a6edf235f0f79211400862d52d1bc3b3787ad42dbccd2eca6774",
+    "hash": "470c1f318cab63bf0f0316703295d9b1d8b68321c638366ee718fb5e533d9ba7",
     "date": "2026-10-13"
   },
   "zh-Hant/faq.html": {
-    "hash": "838911d1f044e2724f3a6fef562638700ade1d2956684657f5fda5520d7dbd33",
+    "hash": "aef5dbb17c0b5d258ecf81907c77ea108ac0878a2d3fb895ce1b5a6372b05aaa",
     "date": "2026-10-13"
   },
   "zh-Hant/how_to_use.html": {
-    "hash": "2d06dab4294a9cb0bab132567c654a92f16fc87ff1391ade887c614a644d9963",
+    "hash": "fc5a3fb7653223500a7878290ff654f3bb720e79c166d1821142712cd3bd9d40",
     "date": "2026-10-13"
   }
 }

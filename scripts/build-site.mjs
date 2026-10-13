@@ -13,6 +13,7 @@ vm.runInNewContext(fs.readFileSync('translations.js','utf8'),context);
 const copy = context.window.TRANS_SEARCH_I18N;
 const locales = [{lang:'en',hrefLang:'en',prefix:''},{lang:'zh-CN',hrefLang:'zh-Hans',prefix:'zh-Hans/'},{lang:'zh-TW',hrefLang:'zh-Hant',prefix:'zh-Hant/'}];
 const pages = ['index','about','help','privacy','faq'];
+const assetRevision = crypto.createHash('sha256').update(['styles.css','i18n.js','search.js','search-core.js'].map(file => fs.readFileSync(file,'utf8')).join('\n')).digest('hex').slice(0,12);
 const getCopy = (lang,key) => { const [scope,name] = key.split('.'); const value = copy.translations[lang]?.[scope]?.[name] ?? copy.pages[scope]?.[name]; if (value === undefined) throw new Error(`Missing copy ${lang}:${key}`); return value; };
 const route = (locale,page) => locale.prefix + (page === 'index' ? '' : page+'.html');
 // Cloudflare Pages redirects .html requests to extensionless routes.
@@ -41,7 +42,7 @@ for (const locale of locales) for (const page of [...pages,'how_to_use']) {
   });
   $('[data-i18n-placeholder]').each((_,element)=>$(element).attr('placeholder',getCopy(locale.lang,$(element).attr('data-i18n-placeholder'))));
   $('title').text(getCopy(locale.lang,`${page}.meta_title`));
-  for (const selector of ['link[rel="stylesheet"]','script[src]']) $(selector).each((_,element)=>{ const node=$(element);const attribute=element.tagName==='link'?'href':'src';node.attr(attribute,(locale.prefix?'../':'')+node.attr(attribute)); });
+  for (const selector of ['link[rel="stylesheet"]','script[src]']) $(selector).each((_,element)=>{ const node=$(element);const attribute=element.tagName==='link'?'href':'src';node.attr(attribute,(locale.prefix?'../':'')+node.attr(attribute)+'?v='+assetRevision); });
   $('link[rel="canonical"],link[rel="alternate"],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"],script#language-urls').remove();
   if (configuration.googleSiteVerification) $('head').append($('<meta name="google-site-verification">').attr('content', configuration.googleSiteVerification));
   const pageUrl=canonical(locale,page==='how_to_use'?'help':page);

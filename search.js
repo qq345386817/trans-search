@@ -1,4 +1,5 @@
-import { buildSearchUrl, translateQuery } from './search-core.js';
+// Keep the dependent module on the same deployment revision as this script.
+const { buildSearchUrl, translateQuery } = await import(new URL('./search-core.js' + new URL(import.meta.url).search, import.meta.url).href);
 
 const form = document.getElementById('search-form');
 if (form) {

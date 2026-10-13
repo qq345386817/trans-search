@@ -15,7 +15,7 @@ for (const prefix of ['', 'zh-Hans/', 'zh-Hant/']) {
     const filename = `dist/${prefix}${page}.html`;
     const $ = load(fs.readFileSync(filename, 'utf8'));
     $('script[src],link[rel="stylesheet"]').each((_, node) => {
-      const resource = $(node).attr('src') || $(node).attr('href');
+      const resource = ($(node).attr('src') || $(node).attr('href')).split(/[?#]/)[0];
       if (!fs.existsSync(path.resolve(path.dirname(filename), resource))) {
         throw new Error(`Missing deployed asset: ${filename} -> ${resource}`);
       }

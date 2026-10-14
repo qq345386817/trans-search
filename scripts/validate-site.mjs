@@ -5,10 +5,12 @@ import { load } from 'cheerio';
 const configured = JSON.parse(fs.readFileSync('site-config.json','utf8')).siteUrl;
 const base = new URL(process.env.SITE_URL || configured);
 if (!base.pathname.endsWith('/')) base.pathname += '/';
+const locales = JSON.parse(fs.readFileSync('site-locales.json','utf8'));
+const pages = JSON.parse(fs.readFileSync('site-pages.json','utf8'));
 const sitemap = load(fs.readFileSync('sitemap.xml','utf8'),{xmlMode:true});
 const urls=sitemap('url > loc').map((_,node)=>sitemap(node).text()).get();
-if(urls.length!==15 || new Set(urls).size!==15)throw new Error('Expected 15 unique canonical URLs');
-const hrefLangs=['en','zh-Hans','zh-Hant','x-default'];
+if(urls.length!==pages.length*locales.length || new Set(urls).size!==pages.length*locales.length)throw new Error('Unexpected canonical URL count');
+const hrefLangs=[...locales.map(locale=>locale.hrefLang),'x-default'];
 const files=new Set();
 for(const url of urls){
  const parsed=new URL(url);if(parsed.origin!==base.origin || !parsed.pathname.startsWith(base.pathname) || parsed.search || parsed.hash)throw new Error('Invalid sitemap URL '+url);
@@ -18,12 +20,19 @@ for(const url of urls){
  if(!$('title').text().trim() || !$('meta[name="description"]').attr('content')?.trim() || $('h1').length!==1)throw new Error('Missing content metadata '+file);
  if($('meta[name="robots"]').attr('content')?.includes('noindex'))throw new Error('Indexable page has noindex '+file);
  const alternates=$('link[rel="alternate"][hreflang]');
- if(alternates.length!==4)throw new Error('Missing alternates '+file);
+ if(alternates.length!==hrefLangs.length)throw new Error('Missing alternates '+file);
  const links={};alternates.each((_,node)=>{links[$(node).attr('hreflang')]=$(node).attr('href');});
  for(const lang of hrefLangs)if(!urls.includes(links[lang]))throw new Error('Unknown alternate '+file+':'+lang);
  for(const target of Object.values(links)){
   const p=new URL(target).pathname.slice(base.pathname.length);const f=p.endsWith('/')||!p?p+'index.html':p+'.html';const other=load(fs.readFileSync(f,'utf8'));
   const reciprocal=other('link[rel="alternate"]').map((_,node)=>other(node).attr('href')).get();if(!reciprocal.includes(url))throw new Error('Nonreciprocal hreflang '+file);
+ }
+ if ($('html').attr('lang')==='ar' && $('html').attr('dir')!=='rtl') throw new Error('Missing Arabic RTL direction');
+ const locale = locales.find(locale=>locale.lang===$('html').attr('lang'));
+ if (!locale) throw new Error('Unknown page language');
+ if (file.endsWith('index.html')) {
+  const messages=JSON.parse($('#tool-copy').text()); for(const key of ['translate_button','local_note','failed_local','model_download'])if(!messages[key])throw new Error('Missing runtime tool copy '+file+':'+key);
+  if ($('#translation-mode').val()!=='local') throw new Error('Local translation must be the default');
  }
  $('script[type="application/ld+json"]').each((_,node)=>JSON.parse($(node).text()));
  const languageRoutes=JSON.parse($('#language-urls').text());
@@ -35,7 +44,7 @@ function assertLocal(value,file){
  const [pathname]=value.split(/[?#]/);let target=path.posix.normalize(path.posix.join(path.posix.dirname(file),pathname));if(target==='.'||value.endsWith('/'))target=(target==='.'?'':target+'/')+'index.html';
  if(!fs.existsSync(target))throw new Error('Missing local target '+file+' -> '+value+' ('+target+')');
 }
-for(const prefix of ['','zh-Hans/','zh-Hant/']){
+for(const {prefix} of locales){
  const $=load(fs.readFileSync(prefix+'how_to_use.html','utf8'));if(!$('meta[http-equiv="refresh"]').attr('content')?.includes('help.html') || !$('meta[name="robots"]').attr('content')?.includes('noindex'))throw new Error('Invalid legacy help redirect');
 }
 if(!fs.readFileSync('robots.txt','utf8').includes(new URL('sitemap.xml',base).href))throw new Error('Sitemap not declared');

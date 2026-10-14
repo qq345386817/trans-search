@@ -2,7 +2,7 @@
 
 > An online search-query translation tool and a browser-extension project for cross-language search.
 
-The website translates user-entered queries with Google’s web translation endpoint, lets the user edit the translation, and opens Google, Bing, Baidu, or Sogou in a separate tab. It does not translate entire results pages or guarantee better results. No account or saved query-history database is used. Queries are sent to third-party services; hosting access logs may exist.
+The website defaults to browser on-device translation where supported. Users can explicitly choose Google online translation. It lets the user edit the translation, and opens Google, Bing, Baidu, or Sogou in a separate tab. It does not translate entire results pages or guarantee better results. No account or saved query-history database is used. Local translation does not upload query text. Online translation and searches send queries to the chosen providers. The product uses no usage analytics; hosting network and security logs may exist.
 
 The companion app and Safari/Chromium extension are in development and have not officially launched. The extension can automatically or manually translate queries on supported search results pages; the companion Apple app helps enable the Safari extension.
 
@@ -15,6 +15,25 @@ The companion app and Safari/Chromium extension are in development and have not 
 - [App and extension](https://trans-search.luopeike.com/about): Product capabilities and development status.
 - [Help](https://trans-search.luopeike.com/help): Browser-extension setup and usage.
 - [Privacy](https://trans-search.luopeike.com/privacy): Query processing, local extension storage, and third-party services.
+
+## Use cases
+
+- [Technical research](https://trans-search.luopeike.com/technical-search): Preserve API and product names, compare original and translated searches, and verify versions.
+- [Learning resources](https://trans-search.luopeike.com/learning-search): Refine queries by topic, level, and prerequisites.
+
+## Languages
+
+- [English](https://trans-search.luopeike.com/)
+- [简体中文](https://trans-search.luopeike.com/zh-Hans/)
+- [繁體中文](https://trans-search.luopeike.com/zh-Hant/)
+- [日本語](https://trans-search.luopeike.com/ja/)
+- [한국어](https://trans-search.luopeike.com/ko/)
+- [Español](https://trans-search.luopeike.com/es/)
+- [Français](https://trans-search.luopeike.com/fr/)
+- [Deutsch](https://trans-search.luopeike.com/de/)
+- [Português](https://trans-search.luopeike.com/pt/)
+- [العربية](https://trans-search.luopeike.com/ar/)
+- [हिन्दी](https://trans-search.luopeike.com/hi/)
 
 ## Source
 

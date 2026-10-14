@@ -1,0 +1,13 @@
+[
+  {"lang":"en","hrefLang":"en","prefix":"","label":"English"},
+  {"lang":"zh-CN","hrefLang":"zh-Hans","prefix":"zh-Hans/","label":"简体中文"},
+  {"lang":"zh-TW","hrefLang":"zh-Hant","prefix":"zh-Hant/","label":"繁體中文"},
+  {"lang":"ja","hrefLang":"ja","prefix":"ja/","label":"日本語"},
+  {"lang":"ko","hrefLang":"ko","prefix":"ko/","label":"한국어"},
+  {"lang":"es","hrefLang":"es","prefix":"es/","label":"Español"},
+  {"lang":"fr","hrefLang":"fr","prefix":"fr/","label":"Français"},
+  {"lang":"de","hrefLang":"de","prefix":"de/","label":"Deutsch"},
+  {"lang":"pt","hrefLang":"pt","prefix":"pt/","label":"Português"},
+  {"lang":"ar","hrefLang":"ar","prefix":"ar/","label":"العربية","dir":"rtl"},
+  {"lang":"hi","hrefLang":"hi","prefix":"hi/","label":"हिन्दी"}
+]

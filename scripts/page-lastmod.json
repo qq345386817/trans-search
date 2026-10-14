@@ -1,74 +1,354 @@
 {
   "index.html": {
-    "hash": "bba723a2473e033bad6254cfaa355e158cb461847a6fd23c60f0b20d89ed4e38",
-    "date": "2026-10-13"
+    "hash": "9910554be084129644d6db6334b2b9bd9fbebbd1959da5ced23a062946da7bd8",
+    "date": "2026-10-14"
   },
   "about.html": {
-    "hash": "75d7a35c1b7d8f367f89e25b39729dce2ddbddecbe217ce7946ced199d566ed9",
-    "date": "2026-10-13"
+    "hash": "94e52104aaf5c91f24cdacfc34a8a6f24b9a2c134182d18c79dcc081081a2f11",
+    "date": "2026-10-14"
   },
   "help.html": {
-    "hash": "7581ccfd4b07dc586600b6534f455dc56261fb203595f36e4f43f0d54f85e9cc",
-    "date": "2026-10-13"
+    "hash": "368981376b8433e13805b885658ccd202150d4034281284c6e6a1ebf703964e8",
+    "date": "2026-10-14"
   },
   "privacy.html": {
-    "hash": "51a3ce144dfca50217daafaba51e4bd21b0de6962cd0ef5aa9f70ef929f34724",
-    "date": "2026-10-13"
+    "hash": "f2a4935be9280b32200dafa925c9d14d1832428069f946e30c079c957567a1df",
+    "date": "2026-10-14"
   },
   "faq.html": {
-    "hash": "8d0fd4fca2fcbe0764260384c1518db6608d76fcb2c07951c3812c39ca2f76b5",
-    "date": "2026-10-13"
+    "hash": "bf4246ddac21a3f3459a78f96418a37a7de5639fba682f7b4202f730fd929476",
+    "date": "2026-10-14"
   },
   "how_to_use.html": {
-    "hash": "fa743da344ed9dde8ddbbd807625936611b95f13cf8930c0d35776db8dbd345d",
-    "date": "2026-10-13"
+    "hash": "39a8611a0bcb5ebd33ddf1179ebe634d95952c4cde276813ba37c852c63c26aa",
+    "date": "2026-10-14"
   },
   "zh-Hans/index.html": {
-    "hash": "4199c51091d9209007ea59847c84026f606a755064ca5f4132fdbe7972e6bdda",
-    "date": "2026-10-13"
+    "hash": "be9278c88a179b878740425ee91dfd9d335e3dab5bd67353e4ace9d22e633e06",
+    "date": "2026-10-14"
   },
   "zh-Hans/about.html": {
-    "hash": "979a054d25f49094b48aa133d15c0abf941642da309816695ba80ababe847243",
-    "date": "2026-10-13"
+    "hash": "4bd7c76beb50a3f2df1b9147352023056b5da36f0de35e3a053ef72d03456d54",
+    "date": "2026-10-14"
   },
   "zh-Hans/help.html": {
-    "hash": "d9f4c8bdf271e3460f08202c1fcafe2a2873cdba3371c48623c74bae932f50db",
-    "date": "2026-10-13"
+    "hash": "2ecaa94a9536362231ec4fe5ca17265b5c3c051944605da88bdb538238cfdd5e",
+    "date": "2026-10-14"
   },
   "zh-Hans/privacy.html": {
-    "hash": "f6092e6d14ae1308a02be2479ca0528e4318b80f94025970388a2635ea9fd9e0",
-    "date": "2026-10-13"
+    "hash": "f9f0fb7efb8368b02733604dc4e916a931b30b136d0f46d250f968d475586344",
+    "date": "2026-10-14"
   },
   "zh-Hans/faq.html": {
-    "hash": "a89ef0bcd5fb85224cb0d4664c071c915058f3fdcc8ee98b467cdb2194defe23",
-    "date": "2026-10-13"
+    "hash": "078cb55801176d4abba68906ebf361100a1e1724c37330b1425f04f9db8baee9",
+    "date": "2026-10-14"
   },
   "zh-Hans/how_to_use.html": {
-    "hash": "cded8acc39c15bcb1d853ff50af2a5f3f5cbf06260b883d3458c15ed474b87b9",
-    "date": "2026-10-13"
+    "hash": "76db7d68a19301a51ff9d10557b50f92e69166c4ffa92dfe1547d02eddb8a587",
+    "date": "2026-10-14"
   },
   "zh-Hant/index.html": {
-    "hash": "c5b85752171e223022880e95ae9747807e6d2e33e7757d5ff2dc56faa828c2f6",
-    "date": "2026-10-13"
+    "hash": "ffcdea7cf79f20971115bfdae0dcc6406f156e1b37c0abaaf01ff0d653a6ffc2",
+    "date": "2026-10-14"
   },
   "zh-Hant/about.html": {
-    "hash": "c085783e64b95432f04f5399e2ababeeff98dfadd4cf430df39276078eb0a1ae",
-    "date": "2026-10-13"
+    "hash": "c1ccb3c564183ada94871a4a1756fece17cdd394d37a353ad2b6257362fec23d",
+    "date": "2026-10-14"
   },
   "zh-Hant/help.html": {
-    "hash": "b00b2eb9df96628b7c2d865330e77b40eb19bbfce7f739534b5c8877abec9851",
-    "date": "2026-10-13"
+    "hash": "c8c9f0ce3a77f1281edea67b3625b8fb2ce0ab414bd35f8341b308c3d344bbf6",
+    "date": "2026-10-14"
   },
   "zh-Hant/privacy.html": {
-    "hash": "470c1f318cab63bf0f0316703295d9b1d8b68321c638366ee718fb5e533d9ba7",
-    "date": "2026-10-13"
+    "hash": "0dfe5b2ae940368275bef95055cfae745031c7b71d4620954a3e8ea301916ed8",
+    "date": "2026-10-14"
   },
   "zh-Hant/faq.html": {
-    "hash": "aef5dbb17c0b5d258ecf81907c77ea108ac0878a2d3fb895ce1b5a6372b05aaa",
-    "date": "2026-10-13"
+    "hash": "8a1ab3a15fc79eca579db863e52d558b26cde13c7b68de6bc18924bf5828b091",
+    "date": "2026-10-14"
   },
   "zh-Hant/how_to_use.html": {
-    "hash": "fc5a3fb7653223500a7878290ff654f3bb720e79c166d1821142712cd3bd9d40",
-    "date": "2026-10-13"
+    "hash": "2f167866ecb16ac47529b8feab50375f3c7dbef05c35fe22494ce8ae90b2c8b1",
+    "date": "2026-10-14"
+  },
+  "technical-search.html": {
+    "hash": "c7baeb09af8f59aa5bbd0c352e21afcb0b0142c7693f2d7d211c70a9dd487c28",
+    "date": "2026-10-14"
+  },
+  "learning-search.html": {
+    "hash": "e220942576f7c93be3df26a500be448cff93156f43e77c7577fd697267edbd37",
+    "date": "2026-10-14"
+  },
+  "zh-Hans/technical-search.html": {
+    "hash": "68e486f5d45b97dc681a420fe9fff7c9a4e42cd428efe5bb74ce504bc00a974d",
+    "date": "2026-10-14"
+  },
+  "zh-Hans/learning-search.html": {
+    "hash": "d77449e761346f92093b5d0a98a04b1845b374b0fae16828241d8d4c9b8f277a",
+    "date": "2026-10-14"
+  },
+  "zh-Hant/technical-search.html": {
+    "hash": "72f5819825c42a88530b1a8c55baf1ad39fd9dfc286f4e56cec50d462c2f7e52",
+    "date": "2026-10-14"
+  },
+  "zh-Hant/learning-search.html": {
+    "hash": "f9e4b3580641ac50756b4d9bf4a5b7241de7e5c616c053119d18a6757aca4c5c",
+    "date": "2026-10-14"
+  },
+  "ja/index.html": {
+    "hash": "a1186ee0a4773a5252ab9555648f15b47d8b695409bc90221e02e03e009cbede",
+    "date": "2026-10-14"
+  },
+  "ja/about.html": {
+    "hash": "e3a98aa1700f160705bed5362b3beba3b72a3833f99ffa07c0738fae30e3740c",
+    "date": "2026-10-14"
+  },
+  "ja/help.html": {
+    "hash": "a363c6b9079f5dafae64735da7346b9e6ee97951c9c37a0be161671104561b36",
+    "date": "2026-10-14"
+  },
+  "ja/privacy.html": {
+    "hash": "3c46c5a855b5e43c81bb391a1fcf43d540ab51a8479e75b0e855ff51b69da69a",
+    "date": "2026-10-14"
+  },
+  "ja/faq.html": {
+    "hash": "0b2c9888f915fb6c3fffc625c81ead12fd3a2143b12c692dad326aefaa04cc19",
+    "date": "2026-10-14"
+  },
+  "ja/technical-search.html": {
+    "hash": "85e2c6f9cb0f81135a921da48cc9914ddc8b15b16f1efa661b16552246e2e2f7",
+    "date": "2026-10-14"
+  },
+  "ja/learning-search.html": {
+    "hash": "fff5b58ad1d0ba0e261cc9ca6f07be4755e0857da786c56694b08afe3487a201",
+    "date": "2026-10-14"
+  },
+  "ja/how_to_use.html": {
+    "hash": "b1e7decb4e76256f21f4cb9d1e734681738add6df1d98ac2a4e7907aa08ab150",
+    "date": "2026-10-14"
+  },
+  "ko/index.html": {
+    "hash": "363cbdff7d3b98ebe8e15f4a8649db86ed399c4382e8a0c3839642703b7ff560",
+    "date": "2026-10-14"
+  },
+  "ko/about.html": {
+    "hash": "f436b02327d9350d7d1612b2214e00949e0ff7e3756750954696c36af9f2679f",
+    "date": "2026-10-14"
+  },
+  "ko/help.html": {
+    "hash": "8ebcf11858ebe7f6b9189bdd64eedfcc4c0517c8c86b77b8fa9a80e3376d7d43",
+    "date": "2026-10-14"
+  },
+  "ko/privacy.html": {
+    "hash": "a8f263801376c7718d1fb0a0dd141e77e663b558a8c61e89aa0243efe965d01f",
+    "date": "2026-10-14"
+  },
+  "ko/faq.html": {
+    "hash": "f608cd8d38b6109924003144941b07f889a40434d8bc81f40d3fa408503059af",
+    "date": "2026-10-14"
+  },
+  "ko/technical-search.html": {
+    "hash": "1a732fc479cdaa237e0ed996c61e6b2b3d52f5eb5cee2c910cd5693e0548d81f",
+    "date": "2026-10-14"
+  },
+  "ko/learning-search.html": {
+    "hash": "f68ffc06bd13beef0e67285d0aeb58fd4ea8acba40fa8326b2cecf474a4807cb",
+    "date": "2026-10-14"
+  },
+  "ko/how_to_use.html": {
+    "hash": "111ed9bbbf57b5c2bf4d6db43011ba51c933fd730ef04158ee22f9ea52f9de31",
+    "date": "2026-10-14"
+  },
+  "es/index.html": {
+    "hash": "c2ac6e0ba1416d04b9cdbe96220003880d951ebe30e08dde33ce69f5e53aa43a",
+    "date": "2026-10-14"
+  },
+  "es/about.html": {
+    "hash": "c27caef832a314f96dca24705aba1171430c0852ddb50cf8b5e821a1c8020df2",
+    "date": "2026-10-14"
+  },
+  "es/help.html": {
+    "hash": "89aae6f0e851886c512a267d86bb16d63d9a834360dbba9f7628b0532c2981bd",
+    "date": "2026-10-14"
+  },
+  "es/privacy.html": {
+    "hash": "c16ca7b0f1875dfff9be711b805f4d551a4e35c3fefa3fcd9366bad1ae20d72a",
+    "date": "2026-10-14"
+  },
+  "es/faq.html": {
+    "hash": "d42a76bde3ceb071c416c00d6d64c663d4a3404e080a16ced4460bc10b01b6e1",
+    "date": "2026-10-14"
+  },
+  "es/technical-search.html": {
+    "hash": "639aba27806e8aafbee5ae82ab203f9ea7b4fd81556b4c20c03fdaf2707bd909",
+    "date": "2026-10-14"
+  },
+  "es/learning-search.html": {
+    "hash": "8f4ac7075bee7a3e96ac126a1b90439c0201c3faafc3016eb8fc30f497ff8f31",
+    "date": "2026-10-14"
+  },
+  "es/how_to_use.html": {
+    "hash": "7096ae4019085b0c9e0f4fb7acbf4922ae6bfcd848657772c1d55fac7e0d9af8",
+    "date": "2026-10-14"
+  },
+  "fr/index.html": {
+    "hash": "30445a1d9ed1d994cc3a73b2a19652676d914f1220b699db0b9a21084b225a46",
+    "date": "2026-10-14"
+  },
+  "fr/about.html": {
+    "hash": "f4a553e5c7e1ec6d6176d0f04ff8f8e4bd6c7dc09ee8baf4cbb33137f16bf3a3",
+    "date": "2026-10-14"
+  },
+  "fr/help.html": {
+    "hash": "c83605b3e3da9becd7cb73d699e32b6c997fbb18124238d679dbb60fab3d78ea",
+    "date": "2026-10-14"
+  },
+  "fr/privacy.html": {
+    "hash": "19e31bdb8fb23a1c71fddd17e68a7470c0774c44a5adbae5efb5755d284b7091",
+    "date": "2026-10-14"
+  },
+  "fr/faq.html": {
+    "hash": "8c673f61b9bfb7c6c99a94fe68d834ecd039fdd8fb0969bcfab95d859b5f344b",
+    "date": "2026-10-14"
+  },
+  "fr/technical-search.html": {
+    "hash": "240646f3215c9ee78c5833e78b0c0473830e2b504c6a597b84f53b3286fe4e10",
+    "date": "2026-10-14"
+  },
+  "fr/learning-search.html": {
+    "hash": "8e855c598e691aa7b6505592b6224e7017cda27e56879a09a9d7a9d296c037be",
+    "date": "2026-10-14"
+  },
+  "fr/how_to_use.html": {
+    "hash": "5a91f486d5fdf597611cb8f979a21a44aec03e68b4c01cbf862d79e395bccf3a",
+    "date": "2026-10-14"
+  },
+  "de/index.html": {
+    "hash": "974d7fa05b6c365af022e4f69fc93fcd22dd5462f6e84b55daaefa45dab4973e",
+    "date": "2026-10-14"
+  },
+  "de/about.html": {
+    "hash": "8b288701f1330ff375d7cd401f329b653eddff49501ef6dd8cef404b450c26a5",
+    "date": "2026-10-14"
+  },
+  "de/help.html": {
+    "hash": "42daa7bd47e112d3e2b29a29622d4679e3db6c254658244916782cbb70f0ee50",
+    "date": "2026-10-14"
+  },
+  "de/privacy.html": {
+    "hash": "53711d5da3e269a3b851cd5b355d2d18e4b4de5867fc5cd324f3d9d883f68157",
+    "date": "2026-10-14"
+  },
+  "de/faq.html": {
+    "hash": "5e4da2fc2934403a866f51df7da81a90bfec12856b9dc35ec5a6ade0d286ca03",
+    "date": "2026-10-14"
+  },
+  "de/technical-search.html": {
+    "hash": "e4dd52042dd2db35da1ecdfd6ee02cb9ea4e383d211250cc11b51f217870e64b",
+    "date": "2026-10-14"
+  },
+  "de/learning-search.html": {
+    "hash": "a6a2bcf0a2017843e486c68bec74b1ae77873ff3a84a2c5f4e5e1d9412d99ebc",
+    "date": "2026-10-14"
+  },
+  "de/how_to_use.html": {
+    "hash": "52f739e11bcd095fd7cd0a11ff295380847d5827879443dea145d3707583e117",
+    "date": "2026-10-14"
+  },
+  "pt/index.html": {
+    "hash": "4121e225cf2dcf234cdb147de576dee6a39a31beaab9cb1f3f0f2b6ba006b093",
+    "date": "2026-10-14"
+  },
+  "pt/about.html": {
+    "hash": "0d7c1dd44637f8acff718964826ae8fbfead735a65ee56efdd7cf080b966e0cc",
+    "date": "2026-10-14"
+  },
+  "pt/help.html": {
+    "hash": "9654ff3288fa40f6b72143757e31a05808a0de1dba3859c2177b42e3c0517410",
+    "date": "2026-10-14"
+  },
+  "pt/privacy.html": {
+    "hash": "957437925979146bb673f392fa978339347d624fb86a5d83e4c5da8a9a1f5bab",
+    "date": "2026-10-14"
+  },
+  "pt/faq.html": {
+    "hash": "13373b9f3baf6807bd698659f2258fa1d9eb75f25505fffdd9ea3847b7a8e8a7",
+    "date": "2026-10-14"
+  },
+  "pt/technical-search.html": {
+    "hash": "f68af168714c8927bef3bae416f7a57fa4b30cb347baff1f947bba5db1e0e4c9",
+    "date": "2026-10-14"
+  },
+  "pt/learning-search.html": {
+    "hash": "7c877030c0fda9da86a46c712383aef153da9c50224085eb56affd91c553010b",
+    "date": "2026-10-14"
+  },
+  "pt/how_to_use.html": {
+    "hash": "e92dc8b88a08b03a64dc19677977078f9d75455770f184cfa93974cfa5c5264d",
+    "date": "2026-10-14"
+  },
+  "ar/index.html": {
+    "hash": "3a1f67a97f9e6b5790bc8c669cd4660cf4e1d2894f0286a00003bb3ec8667ddd",
+    "date": "2026-10-14"
+  },
+  "ar/about.html": {
+    "hash": "11b923bb51b0c8a515148591af1d47b594b1b6f46ea8e6ce154e0482947a5038",
+    "date": "2026-10-14"
+  },
+  "ar/help.html": {
+    "hash": "2aa06643c32b9c37d371991db950c04dd528afeca1ceaa6dd8b4e924098564cc",
+    "date": "2026-10-14"
+  },
+  "ar/privacy.html": {
+    "hash": "fdc49a32660019d9ce65175b45477f47ac4520a4fb8cfc8334ecc8a0052e078e",
+    "date": "2026-10-14"
+  },
+  "ar/faq.html": {
+    "hash": "539d77da34e90d34cdc1e0c9833cb5cb24de23140e4afb4430b167dafb580e0a",
+    "date": "2026-10-14"
+  },
+  "ar/technical-search.html": {
+    "hash": "085facfd955c046cf98f35a99567e9a8465d41b4b474718b5dbeeb920b5c160b",
+    "date": "2026-10-14"
+  },
+  "ar/learning-search.html": {
+    "hash": "9f7b6c3f922c07acdba50cba5e3c0b534ae2c7c6f1d11135e00629444c1fd89a",
+    "date": "2026-10-14"
+  },
+  "ar/how_to_use.html": {
+    "hash": "cd5366c12208a7ddb762fe05c07f5bb8afb567b80a0aad035a0ca29c438ec757",
+    "date": "2026-10-14"
+  },
+  "hi/index.html": {
+    "hash": "82ddd75ef31c99373449391ccb9beb4edaab639bd1c8ceca38896c67eb7917a0",
+    "date": "2026-10-14"
+  },
+  "hi/about.html": {
+    "hash": "d3c255fc6442f674568f59540c14ad0b52a163dcced22c056e337173e00da1ae",
+    "date": "2026-10-14"
+  },
+  "hi/help.html": {
+    "hash": "2b482e3eee3ff3fe4f4b74ad97c159fe8ab0c096a38555ca0b4b42a3a3a407a9",
+    "date": "2026-10-14"
+  },
+  "hi/privacy.html": {
+    "hash": "de4a0e890d6d2dc68ac5f06e9a7b61672b859cb946ce9882724921ce9b6cef13",
+    "date": "2026-10-14"
+  },
+  "hi/faq.html": {
+    "hash": "c2d0a72910a356b1d7719f9e5c0713e38642d0ba384690be37806a842e0e5653",
+    "date": "2026-10-14"
+  },
+  "hi/technical-search.html": {
+    "hash": "efed43f40ee95b0c99cfef6ef83df81ec228c6c29fe5d71981fb2d9f2367f69d",
+    "date": "2026-10-14"
+  },
+  "hi/learning-search.html": {
+    "hash": "a7b4a788583baac1ae6d2448e1e9f2fd26130b13d08de78694164ce97bb016b2",
+    "date": "2026-10-14"
+  },
+  "hi/how_to_use.html": {
+    "hash": "6e8407d2f1873e43a4e40e941ba7837ce1e3e75fd3e78ba665fcb11145264838",
+    "date": "2026-10-14"
   }
 }

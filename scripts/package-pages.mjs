@@ -2,16 +2,19 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { load } from 'cheerio';
 
+const locales = JSON.parse(fs.readFileSync('site-locales.json','utf8'));
+const pages = JSON.parse(fs.readFileSync('site-pages.json','utf8'));
 const publicFiles = [
   'index.html', 'about.html', 'help.html', 'privacy.html', 'faq.html', 'how_to_use.html',
   'styles.css', 'i18n.js', 'search.js', 'search-core.js',
-  'robots.txt', 'sitemap.xml', 'llms.txt', 'zh-Hans', 'zh-Hant',
+  'robots.txt', 'sitemap.xml', 'llms.txt', '_headers', 'technical-search.html', 'learning-search.html',
+  ...locales.filter(locale => locale.prefix).map(locale => locale.prefix),
 ];
 fs.rmSync('dist', { recursive: true, force: true });
 fs.mkdirSync('dist');
 for (const file of publicFiles) fs.cpSync(file, `dist/${file}`, { recursive: true });
-for (const prefix of ['', 'zh-Hans/', 'zh-Hant/']) {
-  for (const page of ['index', 'about', 'help', 'privacy', 'faq', 'how_to_use']) {
+for (const {prefix} of locales) {
+  for (const page of [...pages,'how_to_use']) {
     const filename = `dist/${prefix}${page}.html`;
     const $ = load(fs.readFileSync(filename, 'utf8'));
     $('script[src],link[rel="stylesheet"]').each((_, node) => {

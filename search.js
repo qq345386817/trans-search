@@ -1,5 +1,5 @@
 // Keep the dependent module on the same deployment revision as this script.
-const { buildSearchUrl, translateQuery } = await import(new URL('./search-core.js' + new URL(import.meta.url).search, import.meta.url).href);
+const { buildSearchUrl, translateQuery, translateLocally } = await import(new URL('./search-core.js' + new URL(import.meta.url).search, import.meta.url).href);
 
 const form = document.getElementById('search-form');
 if (form) {
@@ -7,6 +7,8 @@ if (form) {
   const source = document.getElementById('source-language');
   const target = document.getElementById('target-language');
   const engine = document.getElementById('search-engine');
+  const mode = document.getElementById('translation-mode');
+  const modeNote = document.getElementById('translation-mode-note');
   const translateButton = document.getElementById('translate-query');
   const status = document.getElementById('search-status');
   const preview = document.getElementById('search-preview');
@@ -50,7 +52,9 @@ if (form) {
     updateLinks();
   }
 
-  [query, source, target].forEach((input) => input.addEventListener('input', invalidate));
+  [query, source, target, mode].forEach((input) => input.addEventListener('input', invalidate));
+  function updateModeNote() { modeNote.textContent = message(mode.value === 'local' ? 'local_note' : 'online_note'); }
+  mode.addEventListener('change', updateModeNote);
   engine.addEventListener('change', updateLinks);
   translated.addEventListener('input', updateLinks);
 
@@ -63,25 +67,29 @@ if (form) {
     controller?.abort();
     controller = new AbortController();
     clearTimeout(timer);
-    timer = setTimeout(() => controller.abort(), 8000);
+    const local = mode.value === 'local';
+    timer = setTimeout(() => controller.abort(), local ? 120000 : 15000);
     translateButton.disabled = true;
     translateButton.textContent = message('translating');
     form.setAttribute('aria-busy', 'true');
     preview.hidden = true;
     status.textContent = message('pending');
     try {
-      const result = await translateQuery(text, source.value, target.value, { signal: controller.signal });
+      const operation = local ? translateLocally : translateQuery;
+      const result = await operation(text, source.value, target.value, { signal: controller.signal, onProgress: percent => {
+        if (id === requestId) status.textContent = message('model_download', [String(percent)]);
+      } });
       if (id !== requestId) return;
       translated.value = result;
       preview.hidden = false;
       updateLinks();
-      status.textContent = message('done');
+      status.textContent = message(local ? 'done_local' : 'done');
     } catch (error) {
       if (id !== requestId) return;
       translated.value = '';
       preview.hidden = false;
       updateLinks();
-      status.textContent = message('failed');
+      status.textContent = message(local ? 'failed_local' : 'failed');
     } finally {
       if (id === requestId) {
         clearTimeout(timer);
@@ -100,9 +108,18 @@ if (form) {
     query.focus();
   }));
 
+  const example = new URLSearchParams(location.search).get('example');
+  if (example) {
+    const button = [...document.querySelectorAll('[data-example-id]')].find(button => button.dataset.exampleId === example);
+    if (button) button.click();
+    const clean = new URL(location.href); clean.searchParams.delete('example');
+    history.replaceState(null, '', clean.href);
+  }
+
   copyButton.addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(translated.value); status.textContent = message('copied'); }
     catch { translated.focus(); translated.select(); status.textContent = message('copy_failed'); }
   });
   updateLinks();
+  updateModeNote();
 }

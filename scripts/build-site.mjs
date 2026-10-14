@@ -11,8 +11,9 @@ if (siteUrl.search || siteUrl.hash || !['http:','https:'].includes(siteUrl.proto
 const context = { window: {} };
 vm.runInNewContext(fs.readFileSync('translations.js','utf8'),context);
 const copy = context.window.TRANS_SEARCH_I18N;
-const locales = [{lang:'en',hrefLang:'en',prefix:''},{lang:'zh-CN',hrefLang:'zh-Hans',prefix:'zh-Hans/'},{lang:'zh-TW',hrefLang:'zh-Hant',prefix:'zh-Hant/'}];
-const pages = ['index','about','help','privacy','faq'];
+const locales = JSON.parse(fs.readFileSync('site-locales.json','utf8'));
+for (const locale of locales) if (!copy.translations[locale.lang] && locale.lang !== 'en') copy.translations[locale.lang] = JSON.parse(fs.readFileSync('locales/'+locale.lang+'.json','utf8'));
+const pages = JSON.parse(fs.readFileSync('site-pages.json','utf8'));
 const assetRevision = crypto.createHash('sha256').update(['styles.css','i18n.js','search.js','search-core.js'].map(file => fs.readFileSync(file,'utf8')).join('\n')).digest('hex').slice(0,12);
 const getCopy = (lang,key) => { const [scope,name] = key.split('.'); const value = copy.translations[lang]?.[scope]?.[name] ?? copy.pages[scope]?.[name]; if (value === undefined) throw new Error(`Missing copy ${lang}:${key}`); return value; };
 const route = (locale,page) => locale.prefix + (page === 'index' ? '' : page+'.html');
@@ -31,8 +32,8 @@ for (const locale of locales) for (const page of [...pages,'how_to_use']) {
   const $=load(fs.readFileSync('_templates/'+page+'.html','utf8'));
   // Text is prerendered; the browser only needs this locale's tool messages.
   $('script[src="translations.js"]').remove();
-  if (page === 'index') $('head').append($('<script type="application/json" id="tool-copy">').text(JSON.stringify(copy.translations[locale.lang]?.tool || copy.pages.tool).replace(/</g, '\\u003c')));
-  $('html').attr('lang',locale.lang).attr('data-page-name',page);
+  if (page === 'index') $('head').append($('<script type="application/json" id="tool-copy">').text(JSON.stringify({...copy.pages.tool,...copy.translations[locale.lang]?.tool}).replace(/</g, '\\u003c')));
+  $('html').attr('lang',locale.lang).attr('dir',locale.dir || 'ltr').attr('data-page-name',page);
   $('body').attr('data-lang',locale.lang);
   $('[data-i18n]').each((_,element) => {
     const node=$(element);const value=getCopy(locale.lang,node.attr('data-i18n'));
@@ -45,6 +46,12 @@ for (const locale of locales) for (const page of [...pages,'how_to_use']) {
   for (const selector of ['link[rel="stylesheet"]','script[src]']) $(selector).each((_,element)=>{ const node=$(element);const attribute=element.tagName==='link'?'href':'src';node.attr(attribute,(locale.prefix?'../':'')+node.attr(attribute)+'?v='+assetRevision); });
   $('link[rel="canonical"],link[rel="alternate"],meta[property^="og:"],meta[name^="twitter:"],script[type="application/ld+json"],script#language-urls').remove();
   if (configuration.googleSiteVerification) $('head').append($('<meta name="google-site-verification">').attr('content', configuration.googleSiteVerification));
+  if (page === 'index') {
+    const source = locale.lang; const target = locale.lang === 'en' ? 'ja' : 'en';
+    const developer=$('[data-example-id="technical"]'); developer.attr('data-example-query',getCopy(locale.lang,'cases.technical_query')).attr('data-source-language',source).attr('data-target-language',target);
+    const learning=$('[data-example-id="learning"]'); learning.attr('data-example-query',getCopy(locale.lang,'cases.learning_query')).attr('data-source-language',source).attr('data-target-language',target);
+    $('[data-example-id="japanese"]').attr('data-source-language','en');
+  }
   const pageUrl=canonical(locale,page==='how_to_use'?'help':page);
   $('head').append($('<link rel="canonical">').attr('href',pageUrl));
   for(const alternate of locales) $('head').append($('<link rel="alternate">').attr({hreflang:alternate.hrefLang,href:canonical(alternate,page==='how_to_use'?'help':page)}));
@@ -57,7 +64,7 @@ for (const locale of locales) for (const page of [...pages,'how_to_use']) {
   $('head').append($('<script type="application/json" id="language-urls">').text(JSON.stringify(languageUrls)));
   $('a[href]').each((_,element)=>{ const node=$(element);const href=node.attr('href');if(/^index\.html(?:#|$)/.test(href))node.attr('href',href.replace(/^index\.html/,'./')); });
   const switcher=$('[data-lang-switcher]');switcher.empty();
-  for(const alternate of locales) { const option=$('<option>').attr('value',alternate.lang).text(copy.languages[alternate.lang]);if(alternate.lang===locale.lang)option.attr('selected','selected');switcher.append(option); }
+  for(const alternate of locales) { const option=$('<option>').attr('value',alternate.lang).text(alternate.label);if(alternate.lang===locale.lang)option.attr('selected','selected');switcher.append(option); }
   switcher.attr('aria-label',getCopy(locale.lang,'common.language_label'));
   const graph=[{'@type':'WebSite','@id':new URL('#website',siteUrl).href,name:'Translate & Search',url:siteUrl.href},{'@type':page==='faq'?'FAQPage':'WebPage','@id':pageUrl+'#page',url:pageUrl,name:$('title').text(),description,inLanguage:locale.lang,isPartOf:{'@id':new URL('#website',siteUrl).href}}];
   if(page==='index')graph.push({'@type':'WebApplication','@id':pageUrl+'#tool',name:'Translate & Search',url:pageUrl,description:getCopy(locale.lang,'tool.intro'),applicationCategory:'UtilitiesApplication',operatingSystem:'Any',isAccessibleForFree:true,inLanguage:locale.lang});
@@ -77,5 +84,5 @@ for (const locale of locales) for (const page of [...pages,'how_to_use']) {
 fs.writeFileSync(recordPath,JSON.stringify(lastmod,null,2)+'\n');
 fs.writeFileSync('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+sitemap.join('\n')+'\n</urlset>\n');
 fs.writeFileSync('robots.txt',`User-agent: *\nAllow: /\nDisallow: ${siteUrl.pathname}_templates/\nDisallow: ${siteUrl.pathname}scripts/\nDisallow: ${siteUrl.pathname}tests/\nDisallow: ${siteUrl.pathname}node_modules/\n\nSitemap: ${new URL('sitemap.xml',siteUrl).href}\n`);
-fs.writeFileSync('llms.txt',`# Translate & Search\n\n> An online search-query translation tool and a browser-extension project for cross-language search.\n\nThe website translates user-entered queries with Google’s web translation endpoint, lets the user edit the translation, and opens Google, Bing, Baidu, or Sogou in a separate tab. It does not translate entire results pages or guarantee better results. No account or saved query-history database is used. Queries are sent to third-party services; hosting access logs may exist.\n\nThe companion app and Safari/Chromium extension are in development and have not officially launched. The extension can automatically or manually translate queries on supported search results pages; the companion Apple app helps enable the Safari extension.\n\n## Main pages\n\n- [Online tool](${siteUrl.href}): English tool and product overview.\n- [简体中文工具](${new URL('zh-Hans/',siteUrl).href}): Chinese-language tool and overview.\n- [繁體中文工具](${new URL('zh-Hant/',siteUrl).href}): Traditional Chinese tool and overview.\n- [FAQ](${new URL('faq',siteUrl).href}): Scope, usage, privacy, limitations, and troubleshooting.\n- [App and extension](${new URL('about',siteUrl).href}): Product capabilities and development status.\n- [Help](${new URL('help',siteUrl).href}): Browser-extension setup and usage.\n- [Privacy](${new URL('privacy',siteUrl).href}): Query processing, local extension storage, and third-party services.\n\n## Source\n\n- [Website source](https://github.com/qq345386817/trans-search): Website implementation.\n`);
-console.log(`Rendered ${sitemap.length} canonical pages and 3 compatibility pages for ${siteUrl.href}`);
+fs.writeFileSync('llms.txt',`# Translate & Search\n\n> An online search-query translation tool and a browser-extension project for cross-language search.\n\nThe website defaults to browser on-device translation where supported. Users can explicitly choose Google online translation. It lets the user edit the translation, and opens Google, Bing, Baidu, or Sogou in a separate tab. It does not translate entire results pages or guarantee better results. No account or saved query-history database is used. Local translation does not upload query text. Online translation and searches send queries to the chosen providers. The product uses no usage analytics; hosting network and security logs may exist.\n\nThe companion app and Safari/Chromium extension are in development and have not officially launched. The extension can automatically or manually translate queries on supported search results pages; the companion Apple app helps enable the Safari extension.\n\n## Main pages\n\n- [Online tool](${siteUrl.href}): English tool and product overview.\n- [简体中文工具](${new URL('zh-Hans/',siteUrl).href}): Chinese-language tool and overview.\n- [繁體中文工具](${new URL('zh-Hant/',siteUrl).href}): Traditional Chinese tool and overview.\n- [FAQ](${new URL('faq',siteUrl).href}): Scope, usage, privacy, limitations, and troubleshooting.\n- [App and extension](${new URL('about',siteUrl).href}): Product capabilities and development status.\n- [Help](${new URL('help',siteUrl).href}): Browser-extension setup and usage.\n- [Privacy](${new URL('privacy',siteUrl).href}): Query processing, local extension storage, and third-party services.\n\n## Use cases\n\n- [Technical research](${new URL('technical-search',siteUrl).href}): Preserve API and product names, compare original and translated searches, and verify versions.\n- [Learning resources](${new URL('learning-search',siteUrl).href}): Refine queries by topic, level, and prerequisites.\n\n## Languages\n\n${locales.map(locale=>'- ['+locale.label+']('+new URL(locale.prefix,siteUrl).href+')').join('\n')}\n\n## Source\n\n- [Website source](https://github.com/qq345386817/trans-search): Website implementation.\n`);
+console.log(`Rendered ${sitemap.length} canonical pages and ${locales.length} compatibility pages for ${siteUrl.href}`);

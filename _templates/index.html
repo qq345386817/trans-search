@@ -17,7 +17,7 @@
           <a href="about.html" data-i18n="common.nav_about">About</a>
           <a href="help.html" data-i18n="common.nav_help">Help</a>
           <a href="privacy.html" data-i18n="common.nav_privacy">Privacy</a>
-        <a href="faq.html" data-i18n="common.nav_faq">FAQ</a></nav>
+        <a href="faq.html" data-i18n="common.nav_faq">FAQ</a><a href="technical-search.html" data-i18n="common.nav_cases">Use cases</a></nav>
         <label class="language-switcher">
           <span data-i18n="common.language_label">Language</span>
           <select data-lang-switcher="" aria-label="Language selector"></select>
@@ -38,10 +38,10 @@
 <form id="search-form" action="https://www.google.com/search" method="get" target="_blank">
  <label class="field" for="search-query"><span data-i18n="tool.query_label">Your search query</span><textarea id="search-query" dir="auto" name="q" rows="2" maxlength="300" required="" placeholder="For example: Safari extension debugging" data-i18n-placeholder="tool.query_placeholder" autocomplete="off" spellcheck="false"></textarea></label>
  <div class="search-controls">
-  <label class="field" for="source-language"><span data-i18n="tool.source_label">From</span><select id="source-language"><option value="auto" data-i18n="tool.auto">Detect language</option><option value="en">English</option><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="ru">Русский</option><option value="pt">Português</option><option value="it">Italiano</option><option value="ar">العربية</option></select></label>
-  <label class="field" for="target-language"><span data-i18n="tool.target_label">Translate into</span><select id="target-language"><option value="en">English</option><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="ru">Русский</option><option value="pt">Português</option><option value="it">Italiano</option><option value="ar">العربية</option></select></label>
+  <label class="field" for="source-language"><span data-i18n="tool.source_label">From</span><select id="source-language"><option value="auto" data-i18n="tool.auto">Detect language</option><option value="en">English</option><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="ru">Русский</option><option value="pt">Português</option><option value="it">Italiano</option><option value="ar">العربية</option><option value="hi">हिन्दी</option></select></label>
+  <label class="field" for="target-language"><span data-i18n="tool.target_label">Translate into</span><select id="target-language"><option value="en">English</option><option value="zh-CN">简体中文</option><option value="zh-TW">繁體中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="ru">Русский</option><option value="pt">Português</option><option value="it">Italiano</option><option value="ar">العربية</option><option value="hi">हिन्दी</option></select></label>
   <label class="field" for="search-engine"><span data-i18n="tool.engine_label">Search engine</span><select id="search-engine"><option value="google">Google</option><option value="bing">Bing</option><option value="baidu">Baidu / 百度</option><option value="sogou">Sogou / 搜狗</option></select></label>
- </div>
+ <label class="field" for="translation-mode"><span data-i18n="tool.mode_label">Translation method</span><select id="translation-mode"><option value="local" data-i18n="tool.mode_local" selected="">On-device · private</option><option value="online" data-i18n="tool.mode_online">Google · online</option></select></label></div>
  <div class="search-actions"><button class="button" id="translate-query" type="submit" data-i18n="tool.translate_button">Translate query</button><a id="original-search-link" class="button-secondary" target="_blank" rel="noopener noreferrer" hidden="" data-i18n="tool.original_button">Search original</a></div>
  <p id="search-status" class="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
  <div id="search-preview" class="search-preview" hidden="">
@@ -49,8 +49,8 @@
   <div class="search-actions"><a id="translated-search-link" class="button" target="_blank" rel="noopener noreferrer" hidden="" data-i18n="tool.translated_button">Search translated query</a><button id="copy-translation" class="button-secondary" type="button" disabled="" data-i18n="tool.copy_button">Copy translation</button></div>
  </div>
  <noscript><style>#translate-query,.search-controls{display:none}</style><p data-i18n="tool.no_js">JavaScript is needed for automatic translation. You can still search the original query directly.</p><button type="submit" class="button-secondary" data-i18n="tool.original_button">Search original</button></noscript>
-</form>
-<div class="example-queries"><span class="small" data-i18n="tool.examples_label">Try an example</span><button type="button" data-example-query="Safari 扩展调试方法" data-target-language="en" data-i18n="tool.example_developer">Developer research</button><button type="button" data-example-query="机器学习入门教程" data-target-language="en" data-i18n="tool.example_learning">Learning resources</button><button type="button" data-example-query="Japanese garden design" data-target-language="ja" data-i18n="tool.example_japanese">English to Japanese</button></div>
+<p id="translation-mode-note" class="small" data-i18n="tool.local_note"></p></form>
+<div class="example-queries"><span class="small" data-i18n="tool.examples_label">Try an example</span><button type="button" data-example-query="Safari 扩展调试方法" data-target-language="en" data-i18n="tool.example_developer" data-example-id="technical">Developer research</button><button type="button" data-example-query="机器学习入门教程" data-target-language="en" data-i18n="tool.example_learning" data-example-id="learning">Learning resources</button><button type="button" data-example-query="Japanese garden design" data-target-language="ja" data-i18n="tool.example_japanese" data-example-id="japanese">English to Japanese</button></div>
 <p class="small tool-privacy" data-i18n="tool.privacy_note">Translation sends your query to Google. Searching sends it to the selected engine. No account or query history is saved by this website.</p>
 <p class="small" data-i18n="tool.limitation">This translates the query, not the results page. Translation service availability can vary.</p></section></section>
 
@@ -84,7 +84,7 @@
         <a href="privacy.html" data-i18n="index.supported_privacy">Privacy policy</a>
       </div>
     </section>
-  <section class="section panel" id="app"><h2 data-i18n="index.app_title">Use it in your everyday browser workflow</h2><p data-i18n="index.app_body">The app and browser extension are in development.</p><div class="hero-actions"><a class="button-secondary" href="help.html" data-i18n="index.app_guide">App &amp; extension guide</a><a class="button-secondary" href="mailto:cameoshell09@gmail.com?subject=Translate%20%26%20Search%20test%20version" data-skip-lang="true" data-i18n="index.app_contact">Ask about a test version</a></div></section></main>
+  <section class="section panel" id="app"><h2 data-i18n="index.app_title">Use it in your everyday browser workflow</h2><p data-i18n="index.app_body">The app and browser extension are in development.</p><div class="hero-actions"><a class="button-secondary" href="help.html" data-i18n="index.app_guide">App &amp; extension guide</a><a class="button-secondary" href="mailto:cameoshell09@gmail.com?subject=Translate%20%26%20Search%20test%20version" data-skip-lang="true" data-i18n="index.app_contact">Ask about a test version</a></div></section><section class="section panel"><h2 data-i18n="common.nav_cases">Use cases</h2><p data-i18n="cases.home_intro"></p><div class="inline-links"><a href="technical-search.html" data-i18n="cases.home_technical">Technical research</a><a href="learning-search.html" data-i18n="cases.home_learning">Learning resources</a></div></section></main>
 
   <footer class="container site-footer">
     <div data-i18n="common.footer_copyright">© Translate &amp; Search</div>
@@ -93,8 +93,9 @@
       <a href="about.html" data-i18n="common.footer_about">About</a>
       <a href="help.html" data-i18n="common.footer_help">Help</a>
       <a href="privacy.html" data-i18n="common.footer_privacy">Privacy</a>
-    <a href="faq.html" data-i18n="common.footer_faq">FAQ</a></div>
+    <a href="faq.html" data-i18n="common.footer_faq">FAQ</a><a href="technical-search.html" data-i18n="common.footer_cases">Use cases</a></div>
   </footer>
+
 
 
 

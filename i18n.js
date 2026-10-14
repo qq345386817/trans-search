@@ -5,7 +5,7 @@
   const switcher = document.querySelector('[data-lang-switcher]');
   const aliases = { zh: 'zh-CN', 'zh-cn': 'zh-CN', 'zh-hans': 'zh-CN', 'zh-tw': 'zh-TW', 'zh-hant': 'zh-TW', en: 'en' };
   const requested = new URLSearchParams(location.search).get('lang');
-  const normalized = requested && aliases[requested.toLowerCase()];
+  const normalized = requested && (aliases[requested.toLowerCase()] || Object.keys(routes).find(lang=>lang.toLowerCase()===requested.toLowerCase()));
   // Compatibility with old ?lang= links. Content and canonical are now rendered
   // into physical locale pages; browser language and storage do not rewrite them.
   if (normalized && routes[normalized]) {

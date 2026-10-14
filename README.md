@@ -1,6 +1,6 @@
 # Translate & Search website
 
-A static, multilingual online query-translation tool and product website. No account, server-side query database, saved search history, or product usage tracking is implemented.
+A static, multilingual online query-translation tool and product website. No account, server-side query database, saved search history, or custom app/extension usage tracking is implemented. The website retains official Cloudflare Web Analytics for visits and page performance.
 
 ## Develop and verify
 
@@ -30,7 +30,7 @@ English lives at the website root. Other locales use `zh-Hans/`, `zh-Hant/`, `ja
 
 Cloudflare Pages uses production branch `main`, build command `npm run build:pages`, and output directory `dist`. The packaging script copies only public pages and browser assets; templates, tests, and Node dependencies stay outside the deployment. Run `npm run verify` before committing. Canonical URLs use extensionless routes to match Cloudflare Pages redirects.
 
-The confirmed production domain is `https://trans-search.luopeike.com/`. Attach this custom domain to the Cloudflare Pages project and verify HTTPS before submitting the sitemap to its GSC URL-prefix property. `robots.txt`, `sitemap.xml`, and `llms.txt` are served at this origin root. The old inherited GitHub Pages URL is a legacy copy; its canonical tags point to the confirmed domain. Cloudflare Bulk Redirects sends `trans-search.pages.dev/` to this custom domain with status 301 and preserves paths and query strings. This is an account dashboard rule, not a repository `_redirects` rule. `_headers` sets `Cache-Control: public, max-age=0, must-revalidate, no-transform` to prevent proxy HTML rewriting and automatic analytics-beacon injection for this project. No global domain analytics setting needs to be disabled.
+The confirmed production domain is `https://trans-search.luopeike.com/`. Attach this custom domain to the Cloudflare Pages project and verify HTTPS before submitting the sitemap to its GSC URL-prefix property. `robots.txt`, `sitemap.xml`, and `llms.txt` are served at this origin root. The old inherited GitHub Pages URL is a legacy copy; its canonical tags point to the confirmed domain. Cloudflare Bulk Redirects sends `trans-search.pages.dev/` to this custom domain with status 301 and preserves paths and query strings. This is an account dashboard rule, not a repository `_redirects` rule. `_headers` keeps cache revalidation and security headers while allowing Cloudflare’s official Web Analytics beacon to be automatically injected. The existing dashboard setting remains enabled, excluding visitor data in the EU. Do not add a duplicate manual beacon. Custom app/extension usage tracking remains deferred.
 
 In GSC, check the matching property and concrete excluded-URL examples. Submit the deployed sitemap and request indexing only for real, indexable pages. A successful sitemap submission or accepted indexing request does not prove that all URLs are indexed. Canonical aliases and compatibility redirects can legitimately remain excluded.
 

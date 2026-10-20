@@ -5,7 +5,7 @@ import { load } from 'cheerio';
 const locales = JSON.parse(fs.readFileSync('site-locales.json','utf8'));
 const pages = JSON.parse(fs.readFileSync('site-pages.json','utf8'));
 const publicFiles = [
-  'index.html', 'about.html', 'help.html', 'privacy.html', 'faq.html', 'how_to_use.html',
+  'assets/', 'index.html', 'about.html', 'help.html', 'privacy.html', 'faq.html', 'how_to_use.html',
   'styles.css', 'i18n.js', 'search.js', 'search-core.js',
   'robots.txt', 'sitemap.xml', 'llms.txt', '_headers', 'technical-search.html', 'learning-search.html',
   ...locales.filter(locale => locale.prefix).map(locale => locale.prefix),

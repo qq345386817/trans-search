@@ -17,6 +17,7 @@ for(const url of urls){
  const relative=decodeURIComponent(parsed.pathname.slice(base.pathname.length));const file=relative.endsWith('/')||!relative?relative+'index.html':relative+'.html';
  files.add(file);const $=load(fs.readFileSync(file,'utf8'));
  if($('link[rel="canonical"]').length!==1 || $('link[rel="canonical"]').attr('href')!==url)throw new Error('Canonical mismatch '+file);
+ if($('link[rel="icon"][sizes="96x96"]').length!==1 || $('link[rel="apple-touch-icon"][sizes="180x180"]').length!==1)throw new Error('Missing shared brand icons '+file);
  if(!$('title').text().trim() || !$('meta[name="description"]').attr('content')?.trim() || $('h1').length!==1)throw new Error('Missing content metadata '+file);
  if($('meta[name="robots"]').attr('content')?.includes('noindex'))throw new Error('Indexable page has noindex '+file);
  const alternates=$('link[rel="alternate"][hreflang]');

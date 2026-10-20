@@ -14,6 +14,7 @@ The tool defaults to browser on-device translation using the Translator and Lang
 
 ## Files
 
+- `assets/`: approved shared brand favicon (96px) and Apple touch icon (180px), used by every locale and included in the Pages deployment.
 - `_templates/`: editable HTML templates, including the homepage tool and FAQ.
 - `translations.js`: English, Simplified Chinese, and Traditional Chinese source copy.
 - `locales/*.json` / `site-locales.json`: eight additional complete locales and the shared locale registry, including Arabic RTL.

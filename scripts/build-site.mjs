@@ -30,6 +30,10 @@ const sitemap=[];
 for (const locale of locales) for (const page of [...pages,'how_to_use']) {
   const filename=locale.prefix+page+'.html';
   const $=load(fs.readFileSync('_templates/'+page+'.html','utf8'));
+  for (const [rel,name,size] of [['icon','favicon-96.png','96x96'],['apple-touch-icon','apple-touch-icon-180.png','180x180']]) {
+    const href=path.posix.relative(path.posix.dirname(filename),'assets/'+name);
+    $('head').append($('<link>').attr({rel,href,type:'image/png',sizes:size}));
+  }
   // Text is prerendered; the browser only needs this locale's tool messages.
   $('script[src="translations.js"]').remove();
   if (page === 'index') $('head').append($('<script type="application/json" id="tool-copy">').text(JSON.stringify({...copy.pages.tool,...copy.translations[locale.lang]?.tool}).replace(/</g, '\\u003c')));

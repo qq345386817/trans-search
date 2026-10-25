@@ -39,6 +39,14 @@ In GSC, check the matching property and concrete excluded-URL examples. Submit t
 
 The site includes plain-language FAQ content, visible product limitations, structured data matching the HTML, and a concise `llms.txt` project map. `llms.txt` is optional guidance for systems that choose to consume it, not a requirement or ranking guarantee for Google's AI features. Prioritize crawlability, stable canonical URLs, useful content, and a working tool.
 
-The app and extension are not officially launched. Links currently lead to the setup guide and test-version contact instead of unverified store listings.
+The iPhone/iPad app and Chrome extension have public store listings, verified on 2026-10-25. Homepage actions link to App Store app 6745133924 and Chrome extension faenlleiggblpihlcdeenoehgcdhondo. This website does not claim that the separate macOS App Store release is available.
+
+## Website design system
+
+`brand-system/README.md` records the Search Desk identity, content boundaries, approved icon provenance, accessibility rules and static HTML component guidelines. `brand-system/tokens.json` is the source for shared colors, typography, spacing and radii; the build emits `assets/brand-tokens.css` and fingerprints it with the other frontend files. No external font, UI framework or custom analytics dependency was added.
+
+The homepage pairs a benefit-first introduction with the working query tool; mobile layouts stack them and keep navigation scrollable within its own region. Privacy information stays available through the native disclosure and the full privacy page. Website local translation and extension online translation remain distinct. Existing 11-language routes, 77 canonicals, consent choices and official Cloudflare Web Analytics are preserved.
+
+`website-design/` is an ignored local Design Component draft with an installed token snapshot. It is not deployed. The current tool connection does not expose `design_check`, `design_system_check` or asset-import capabilities, so these local artifacts have not been validated by those dedicated tools and no editor-card availability is claimed. Production validation uses the website build, SEO validator, functional tests, contrast calculations and Chrome rendering/interaction checks.
 
 The technical and learning guides include original-source links and known demo presets. A guide link passes only a public preset identifier (`?example=technical` or `?example=learning`), never a user query. The tool removes the identifier after loading the preset. Generated locale copy was bootstrapped from English and checked for complete keys, preserved markup/format placeholders, and native-language core controls; further native-speaker review remains useful.

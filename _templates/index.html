@@ -28,10 +28,13 @@
 
   <main class="container" id="main-content">
     <section class="hero">
+      <div class="hero-copy">
       <span class="eyebrow" data-i18n="index.hero_eyebrow">Browser extension with a companion app</span>
       <h1 data-i18n="index.hero_title">Search across languages, without breaking your flow.</h1>
       <p class="lead" data-i18n="index.hero_lead">Translate &amp; Search translates your query before results open, so it is easier to reach information that may be clearer, newer, or more complete in another language.</p>
-
+      <p class="supported-engines">Google <span aria-hidden="true">·</span> Bing <span aria-hidden="true">·</span> Baidu <span aria-hidden="true">·</span> Sogou</p>
+      <div class="hero-actions"><a class="button-secondary" href="https://chromewebstore.google.com/detail/faenlleiggblpihlcdeenoehgcdhondo" data-i18n="index.app_contact">Chrome Web Store</a><a class="button-secondary" href="https://apps.apple.com/app/translate-search/id6745133924" data-i18n="index.app_store">App Store · iPhone / iPad</a></div>
+      </div>
     <section id="search-tool" class="search-workbench" aria-labelledby="tool-title">
 <h2 id="tool-title" data-i18n="tool.title">Translate a search query online</h2>
 
@@ -51,7 +54,7 @@
  <noscript><style>#translate-query,.search-controls{display:none}</style><p data-i18n="tool.no_js">JavaScript is needed for automatic translation. You can still search the original query directly.</p><button type="submit" class="button-secondary" data-i18n="tool.original_button">Search original</button></noscript>
 <p id="translation-mode-note" class="small" data-i18n="tool.local_note"></p></form>
 <div class="example-queries"><span class="small" data-i18n="tool.examples_label">Try an example</span><button type="button" data-example-query="Safari 扩展调试方法" data-target-language="en" data-i18n="tool.example_developer" data-example-id="technical">Developer research</button><button type="button" data-example-query="机器学习入门教程" data-target-language="en" data-i18n="tool.example_learning" data-example-id="learning">Learning resources</button><button type="button" data-example-query="Japanese garden design" data-target-language="ja" data-i18n="tool.example_japanese" data-example-id="japanese">English to Japanese</button></div>
-<p class="small tool-privacy" data-i18n="tool.privacy_note">Translation sends your query to Google. Searching sends it to the selected engine. No account or query history is saved by this website.</p>
+<details class="tool-privacy"><summary data-i18n="common.nav_privacy">Privacy</summary><p class="small" data-i18n="tool.privacy_note">Local translation keeps your query on device. Online translation and searches send it to the selected providers.</p></details>
 <p class="small" data-i18n="tool.limitation">This translates the query, not the results page. Translation service availability can vary.</p></section></section>
 
     <section class="section">
@@ -84,7 +87,7 @@
         <a href="privacy.html" data-i18n="index.supported_privacy">Privacy policy</a>
       </div>
     </section>
-  <section class="section panel" id="app"><h2 data-i18n="index.app_title">Use it in your everyday browser workflow</h2><p data-i18n="index.app_body">The app and browser extension are in development.</p><div class="hero-actions"><a class="button-secondary" href="help.html" data-i18n="index.app_guide">App &amp; extension guide</a><a class="button-secondary" href="mailto:cameoshell09@gmail.com?subject=Translate%20%26%20Search%20test%20version" data-skip-lang="true" data-i18n="index.app_contact">Ask about a test version</a></div></section><section class="section panel"><h2 data-i18n="common.nav_cases">Use cases</h2><p data-i18n="cases.home_intro"></p><div class="inline-links"><a href="technical-search.html" data-i18n="cases.home_technical">Technical research</a><a href="learning-search.html" data-i18n="cases.home_learning">Learning resources</a></div></section></main>
+  <section class="section panel" id="app"><h2 data-i18n="index.app_title">Use it in your everyday browser workflow</h2><p data-i18n="index.app_body">Bring the same flow into your browser.</p><div class="hero-actions"><a class="button-secondary" href="https://chromewebstore.google.com/detail/faenlleiggblpihlcdeenoehgcdhondo" data-i18n="index.app_contact">Chrome Web Store</a><a class="button-secondary" href="https://apps.apple.com/app/translate-search/id6745133924" data-i18n="index.app_store">App Store · iPhone / iPad</a><a class="button-secondary" href="help.html" data-i18n="index.app_guide">App &amp; extension guide</a></div></section><section class="section panel"><h2 data-i18n="common.nav_cases">Use cases</h2><p data-i18n="cases.home_intro"></p><div class="inline-links"><a href="technical-search.html" data-i18n="cases.home_technical">Technical research</a><a href="learning-search.html" data-i18n="cases.home_learning">Learning resources</a></div></section></main>
 
   <footer class="container site-footer">
     <div data-i18n="common.footer_copyright">© Translate &amp; Search</div>

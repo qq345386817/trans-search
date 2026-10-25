@@ -4,7 +4,7 @@
 
 The website defaults to browser on-device translation where supported. Users can explicitly choose Google online translation. It lets the user edit the translation, and opens Google, Bing, Baidu, or Sogou in a separate tab. It does not translate entire results pages or guarantee better results. No account or saved query-history database is used. Local translation does not upload query text. Online translation and searches send queries to the chosen providers. The website retains official Cloudflare Web Analytics for visits and page performance. No custom app or extension usage tracking is added; hosting network and security logs may exist.
 
-The companion app and Safari/Chromium extension are in development and have not officially launched. The extension can automatically or manually translate queries on supported search results pages; the companion Apple app helps enable the Safari extension.
+The iPhone/iPad companion app is available on the App Store, and the Chrome extension is available on the Chrome Web Store. Website store links were verified on 2026-10-25. The extension can automatically or manually translate queries on supported search results pages; the companion Apple app helps enable the Safari extension.
 
 ## Main pages
 
@@ -12,7 +12,7 @@ The companion app and Safari/Chromium extension are in development and have not 
 - [简体中文工具](https://trans-search.luopeike.com/zh-Hans/): Chinese-language tool and overview.
 - [繁體中文工具](https://trans-search.luopeike.com/zh-Hant/): Traditional Chinese tool and overview.
 - [FAQ](https://trans-search.luopeike.com/faq): Scope, usage, privacy, limitations, and troubleshooting.
-- [App and extension](https://trans-search.luopeike.com/about): Product capabilities and development status.
+- [App and extension](https://trans-search.luopeike.com/about): Product capabilities and setup.
 - [Help](https://trans-search.luopeike.com/help): Browser-extension setup and usage.
 - [Privacy](https://trans-search.luopeike.com/privacy): Query processing, local extension storage, and third-party services.
 

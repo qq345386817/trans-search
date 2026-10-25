@@ -1,0 +1,25 @@
+/* Generated from brand-system/tokens.json. */
+:root {
+  --bg: #f6f7f5;
+  --surface: #ffffff;
+  --surface-soft: #edf0ec;
+  --text: #15231d;
+  --muted: #56635c;
+  --line: #c3cdc6;
+  --accent: #b83f16;
+  --accent-soft: #fff0e6;
+  --brand-orange: #e85921;
+  --focus: #205a43;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --font-sans: "SF Pro Display", "PingFang SC", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+}

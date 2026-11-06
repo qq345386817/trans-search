@@ -101,8 +101,7 @@
     "more_title": "Si ça ne marche toujours pas",
     "more_hint": "La fenêtre contextuelle comprend désormais à la fois un court indice « Que faire ensuite » et un bloc de première utilisation qui change en fonction de l'état actuel de la page.",
     "more_contact_prefix": "Si vous rencontrez des problèmes ou avez besoin d'assistance produit, contactez",
-    "more_contact_suffix": ".",
-    "more_legacy": "Une ancienne page <code>how_to_use.html</code> est conservée pour des raisons de compatibilité et redirigée vers cette page d'aide."
+    "more_contact_suffix": "."
   },
   "privacy": {
     "meta_title": "Confidentialité - Translate & Search",

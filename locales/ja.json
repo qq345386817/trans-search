@@ -101,8 +101,7 @@
     "more_title": "それでもうまくいかない場合は",
     "more_hint": "ポップアップには、「次に何をするか」という短いヒントと、現在のページの状態に応じて変化する初回使用ブロックの両方が含まれるようになりました。",
     "more_contact_prefix": "問題が発生した場合、または製品サポートが必要な場合は、お問い合わせください。",
-    "more_contact_suffix": "。",
-    "more_legacy": "従来の <code>how_to_use.html</code> ページは互換性のために残されており、このヘルプ ページに転送されます。"
+    "more_contact_suffix": "。"
   },
   "privacy": {
     "meta_title": "プライバシー - Translate & Search",

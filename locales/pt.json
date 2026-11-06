@@ -101,8 +101,7 @@
     "more_title": "Se ainda não funcionar",
     "more_hint": "O pop-up agora inclui uma breve dica “O que fazer a seguir” e um bloco de primeiro uso que muda com o estado atual da página.",
     "more_contact_prefix": "Se você tiver problemas ou precisar de suporte ao produto, entre em contato",
-    "more_contact_suffix": ".",
-    "more_legacy": "Uma página legada <code>how_to_use.html</code> é mantida para compatibilidade e encaminhada para esta página de ajuda."
+    "more_contact_suffix": "."
   },
   "privacy": {
     "meta_title": "Privacidade - Translate & Search",

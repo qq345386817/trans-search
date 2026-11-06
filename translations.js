@@ -113,8 +113,7 @@ window.TRANS_SEARCH_I18N = {
       "more_title": "If it still does not work",
       "more_hint": "The popup now includes both a short “What to do next” hint and a first-use block that changes with the current page state.",
       "more_contact_prefix": "If you run into issues or need product support, contact ",
-      "more_contact_suffix": ".",
-      "more_legacy": "A legacy <code>how_to_use.html</code> page is kept for compatibility and forwards to this help page."
+      "more_contact_suffix": "."
     },
     "privacy": {
       "meta_title": "Privacy - Translate & Search",
@@ -346,8 +345,7 @@ window.TRANS_SEARCH_I18N = {
         "more_title": "如果还是没有生效",
         "more_hint": "弹窗现在同时提供一段“下一步怎么做”提示和一个首用引导区块，它们都会根据当前页面状态变化。",
         "more_contact_prefix": "如果你遇到问题或需要产品支持，请联系 ",
-        "more_contact_suffix": "。",
-        "more_legacy": "旧版 <code>how_to_use.html</code> 页面仍会保留，用于兼容并跳转到当前帮助页。"
+        "more_contact_suffix": "。"
       },
       "privacy": {
         "meta_title": "隐私 - Translate & Search",
@@ -578,8 +576,7 @@ window.TRANS_SEARCH_I18N = {
         "more_title": "如果還是沒有生效",
         "more_hint": "彈窗現在同時提供一段「下一步怎麼做」提示和一個首用引導區塊，它們都會根據目前頁面狀態變化。",
         "more_contact_prefix": "如果你遇到問題或需要產品支援，請聯絡 ",
-        "more_contact_suffix": "。",
-        "more_legacy": "舊版 <code>how_to_use.html</code> 頁面仍會保留，用於相容並跳轉到目前幫助頁。"
+        "more_contact_suffix": "。"
       },
       "privacy": {
         "meta_title": "隱私 - Translate & Search",

@@ -101,8 +101,7 @@
     "more_title": "Si todavía no funciona",
     "more_hint": "La ventana emergente ahora incluye una breve sugerencia sobre \"Qué hacer a continuación\" y un bloque de primer uso que cambia con el estado actual de la página.",
     "more_contact_prefix": "Si tiene problemas o necesita soporte para el producto, comuníquese con",
-    "more_contact_suffix": ".",
-    "more_legacy": "Se mantiene una página <code>how_to_use.html</code> heredada por motivos de compatibilidad y se reenvía a esta página de ayuda."
+    "more_contact_suffix": "."
   },
   "privacy": {
     "meta_title": "Privacidad - Translate & Search",

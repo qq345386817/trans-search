@@ -8,8 +8,8 @@
     "date": "2026-10-25"
   },
   "help.html": {
-    "hash": "d1662544e25f708997890486c7b7775365e95b41849a8316a08b366a99efb976",
-    "date": "2026-10-25"
+    "hash": "c80f7c1b67f1cea90086aef1442ebc5e17f5adeb6f289e952446561788ce4f38",
+    "date": "2026-11-06"
   },
   "privacy.html": {
     "hash": "753011ab7231459e08d31c3bc05881d7dcbfe2eee1b5cd2d8cb1290811244af4",
@@ -32,8 +32,8 @@
     "date": "2026-10-25"
   },
   "zh-Hans/help.html": {
-    "hash": "bc37b56ea6efde5efdb6634e4cf9312f4b9f493b93a816454e195e51458c3b60",
-    "date": "2026-10-25"
+    "hash": "cc095625e3e637af845086b47be73d23b2882f81330051a742867c5423f96965",
+    "date": "2026-11-06"
   },
   "zh-Hans/privacy.html": {
     "hash": "f8c69e0b850ab26a91e60c24687e4dc403ee7e3babc23bac7295c409177bcafb",
@@ -56,8 +56,8 @@
     "date": "2026-10-25"
   },
   "zh-Hant/help.html": {
-    "hash": "b19a200af3e2b3322824ffdcada6aa41c3532a4f206dca1d4234f51febf72a3f",
-    "date": "2026-10-25"
+    "hash": "a5fed671940515230215c21ce27f8737e5af9d2dff5fc2c475dd2e1a5c008eec",
+    "date": "2026-11-06"
   },
   "zh-Hant/privacy.html": {
     "hash": "44281467bb3d5f29318233fcc49e1ec3cb66f8826614982ed7ba0a8443733e95",
@@ -104,8 +104,8 @@
     "date": "2026-10-25"
   },
   "ja/help.html": {
-    "hash": "9ca517a9aade84fa38057d8129c36e889b1bc4a74c85551bb06e41a7b547d1f7",
-    "date": "2026-10-25"
+    "hash": "821f10ba29fbddb6b99a3c1ad9615ebb26450113c2e6bb4d7d1d94fbee83e80b",
+    "date": "2026-11-06"
   },
   "ja/privacy.html": {
     "hash": "a2b7f54e3f1299c4e4e92765c490b7482d7c81f4365b9b5770592bca64851c39",
@@ -136,8 +136,8 @@
     "date": "2026-10-25"
   },
   "ko/help.html": {
-    "hash": "cd0d16b29dcfd27b16ed1e5b87437dc6b43e1c871683eb811d8c562e02cbb21a",
-    "date": "2026-10-25"
+    "hash": "7eb0e0262bf700316a0f379c7337d75f88fee5ce1cb08074bc8a2283db98fdc8",
+    "date": "2026-11-06"
   },
   "ko/privacy.html": {
     "hash": "1beafaa14b208752b290ed106468fc6440c514343bbb94a54117a41cb64e3ab6",
@@ -168,8 +168,8 @@
     "date": "2026-10-25"
   },
   "es/help.html": {
-    "hash": "6baa7f036795b7faacaea8ad68c38af9243ec5769370035935195654bb90e5cb",
-    "date": "2026-10-25"
+    "hash": "2cf34c85811ea6ca2237e91a59273cc7164e0c6e057095df8c0f1371f800d22f",
+    "date": "2026-11-06"
   },
   "es/privacy.html": {
     "hash": "8f7df00682c514212920cbef85a14c238fd729547dac0b5d03247828df5e74e5",
@@ -200,8 +200,8 @@
     "date": "2026-10-25"
   },
   "fr/help.html": {
-    "hash": "aa5df97470fbd2b7f756b6daa1182cf2ff07349f231fbd599ca1e4922cf34807",
-    "date": "2026-10-25"
+    "hash": "06f50319b835bd10f9c36592ef62af5dfa6f0c4c5aa1155c7df49febe5c08aa0",
+    "date": "2026-11-06"
   },
   "fr/privacy.html": {
     "hash": "68e6c7d2fc72625f5e1fd6af02cbd8f3330efd80f5a09563550a887e01f51d66",
@@ -232,8 +232,8 @@
     "date": "2026-10-25"
   },
   "de/help.html": {
-    "hash": "6661ffc1fbaa8a39e7507878e6a714f5066925e7ffa08ea04488e8c8b968392b",
-    "date": "2026-10-25"
+    "hash": "8e1e3e5d17c2b323f6ae0d5d41e333b5510dd824a0628170fb644e4d6a964268",
+    "date": "2026-11-06"
   },
   "de/privacy.html": {
     "hash": "b3223ef7e2f2b418d99141836d275294d830587ffd922443e3c1b8a5900ea1eb",
@@ -264,8 +264,8 @@
     "date": "2026-10-25"
   },
   "pt/help.html": {
-    "hash": "84d33d960276d86d9ebdbc5e7f97bf7ee94b3f747bcd9c86e358e2eecb5d1176",
-    "date": "2026-10-25"
+    "hash": "67e45e87074d704d20c07fc5362cc8fe7c138f1fde0b8916745c24a086d03989",
+    "date": "2026-11-06"
   },
   "pt/privacy.html": {
     "hash": "7f1618ecb07d8ae8bc422d303c96d9beebd8ede75b8c8e6dd82dcc1e71b96c7a",
@@ -296,8 +296,8 @@
     "date": "2026-10-25"
   },
   "ar/help.html": {
-    "hash": "af049bdc73b671327fd2e8c501307324bd3bb160fb4e35c22139e1bd03c3a212",
-    "date": "2026-10-25"
+    "hash": "67c97e6745ab90e30fb605e7c2e01db7cca2b65ff8c37803b47e8047011ed26a",
+    "date": "2026-11-06"
   },
   "ar/privacy.html": {
     "hash": "0dea92bdab381d623da1b2d4283a3fca8b42f18a0841dd5518f6cd3ee0b3a3fe",
@@ -328,8 +328,8 @@
     "date": "2026-10-25"
   },
   "hi/help.html": {
-    "hash": "804701966b40f23ae474e7f4c1f5d8e4a411d5d6cba48e43ebea0862c7325cd0",
-    "date": "2026-10-25"
+    "hash": "75172056288b1b6e3469ff96b1d70b0f7ee9de306dfef3c3ad185230c0ae9d5b",
+    "date": "2026-11-06"
   },
   "hi/privacy.html": {
     "hash": "06f54133b561a070e18645228185f9243a2626f792946eebab8bbda6ada28963",

@@ -101,8 +101,7 @@
     "more_title": "그래도 작동하지 않는 경우",
     "more_hint": "이제 팝업에는 짧은 \"다음에 수행할 작업\" 힌트와 현재 페이지 상태에 따라 변경되는 처음 사용 블록이 모두 포함됩니다.",
     "more_contact_prefix": "문제가 발생하거나 제품 지원이 필요한 경우 문의하세요.",
-    "more_contact_suffix": ".",
-    "more_legacy": "기존 <code>how_to_use.html</code> 페이지는 호환성을 위해 유지되며 이 도움말 페이지로 전달됩니다."
+    "more_contact_suffix": "."
   },
   "privacy": {
     "meta_title": "개인정보 보호 - Translate & Search",

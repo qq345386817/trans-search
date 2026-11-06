@@ -101,8 +101,7 @@
     "more_title": "Wenn es immer noch nicht funktioniert",
     "more_hint": "Das Popup enthält jetzt sowohl einen kurzen Hinweis „Was als nächstes zu tun ist“ als auch einen Block für die erste Verwendung, der sich mit dem aktuellen Seitenstatus ändert.",
     "more_contact_prefix": "Wenn Sie auf Probleme stoßen oder Produktunterstützung benötigen, wenden Sie sich an",
-    "more_contact_suffix": ".",
-    "more_legacy": "Aus Kompatibilitätsgründen wird eine ältere Seite „<code>how_to_use.html</code>“ beibehalten und auf diese Hilfeseite weitergeleitet."
+    "more_contact_suffix": "."
   },
   "privacy": {
     "meta_title": "Datenschutz – Translate & Search",

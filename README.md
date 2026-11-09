@@ -35,6 +35,8 @@ The confirmed production domain is `https://trans-search.luopeike.com/`. Attach 
 
 In GSC, check the matching property and concrete excluded-URL examples. Submit the deployed sitemap and request indexing only for real, indexable pages. A successful sitemap submission or accepted indexing request does not prove that all URLs are indexed. Canonical aliases and compatibility redirects can legitimately remain excluded.
 
+Bing Webmaster Tools uses the same production origin and `sitemap.xml`. Keep the account-provided `BingSiteAuth.xml` at the website root and in the Pages deployment allowlist so ownership remains verifiable after every build. The verification file is public website metadata; adding it does not add visitor tracking. Verify ownership and read back the sitemap status in Bing separately from local build checks; submission and processing do not establish indexing.
+
 ## GEO
 
 The site includes plain-language FAQ content, visible product limitations, structured data matching the HTML, and a concise `llms.txt` project map. `llms.txt` is optional guidance for systems that choose to consume it, not a requirement or ranking guarantee for Google's AI features. Prioritize crawlability, stable canonical URLs, useful content, and a working tool.

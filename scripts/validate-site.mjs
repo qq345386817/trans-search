@@ -49,5 +49,7 @@ for(const {prefix} of locales){
  const $=load(fs.readFileSync(prefix+'how_to_use.html','utf8'));if(!$('meta[http-equiv="refresh"]').attr('content')?.includes('help.html') || !$('meta[name="robots"]').attr('content')?.includes('noindex'))throw new Error('Invalid legacy help redirect');
 }
 if(!fs.readFileSync('robots.txt','utf8').includes(new URL('sitemap.xml',base).href))throw new Error('Sitemap not declared');
+const bingVerification=load(fs.readFileSync('BingSiteAuth.xml','utf8'),{xmlMode:true});
+if(bingVerification('users > user').length!==1 || !/^[A-Fa-f0-9]{32}$/.test(bingVerification('users > user').text().trim()))throw new Error('Invalid Bing ownership verification file');
 if(!fs.readFileSync('llms.txt','utf8').startsWith('# Translate & Search'))throw new Error('Missing llms.txt project title');
 console.log(`Validated ${files.size} canonical pages: metadata, static translations, reciprocal hreflang, local resources, structured data, and compatibility redirects.`);

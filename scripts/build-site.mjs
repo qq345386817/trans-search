@@ -32,7 +32,7 @@ const lastmod = fs.existsSync(recordPath) ? JSON.parse(fs.readFileSync(recordPat
 const sitemap=[];
 for (const locale of locales) for (const page of [...pages,'how_to_use']) {
   const filename=locale.prefix+page+'.html';
-  const $=load(fs.readFileSync('_templates/'+page+'.html','utf8'));
+  const $=load(fs.readFileSync('_templates/'+page+'.html','utf8'), {scriptingEnabled:false});
   $('link[rel="stylesheet"]').first().before('<link rel="stylesheet" href="assets/brand-tokens.css">');
   for (const [rel,name,size] of [['icon','favicon-96.png','96x96'],['apple-touch-icon','apple-touch-icon-180.png','180x180']]) {
     const href=path.posix.relative(path.posix.dirname(filename),'assets/'+name);

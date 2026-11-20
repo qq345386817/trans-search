@@ -17,15 +17,15 @@ The tool defaults to browser on-device translation using the Translator and Lang
 - `assets/`: approved shared brand favicon (96px) and Apple touch icon (180px), used by every locale and included in the Pages deployment.
 - `_templates/`: editable HTML templates, including the homepage tool and FAQ.
 - `translations.js`: English, Simplified Chinese, and Traditional Chinese source copy.
-- `locales/*.json` / `site-locales.json`: eight additional complete locales and the shared locale registry, including Arabic RTL.
+- `locales/*.json` / `site-locales.json`: nine additional complete locales and the shared locale registry, including Arabic RTL.
 - `site-pages.json`: indexable pages, including technical and learning use cases.
 - `search-core.js` / `search.js`: query translation and browser interactions.
-- `scripts/build-site.mjs`: renders 77 canonical pages across 11 locales and 11 legacy help redirects, metadata, canonical links, reciprocal hreflang, structured data, sitemap, robots.txt, and llms.txt.
+- `scripts/build-site.mjs`: renders 84 canonical pages across 12 locales and 12 legacy help redirects, metadata, canonical links, reciprocal hreflang, structured data, sitemap, robots.txt, and llms.txt.
 - `scripts/validate-site.mjs`: validates the generated site without running page JavaScript.
 - `scripts/page-lastmod.json`: content hashes and actual generation dates; unchanged pages retain their lastmod on repeated builds.
 - `site-config.json`: canonical deployment base URL. Set this to the confirmed production URL before publication. `SITE_URL` overrides it for verification.
 
-English lives at the website root. Other locales use `zh-Hans/`, `zh-Hant/`, `ja/`, `ko/`, `es/`, `fr/`, `de/`, `pt/`, `ar/`, and `hi/`. Arabic pages use `dir="rtl"`. Language switching keeps the current page type. Old `?lang=` links redirect to physical locale pages. Browser language or local storage does not rewrite canonical URLs or the main page content. Old `how_to_use.html` pages redirect to localized help, are marked noindex, and are excluded from the sitemap.
+English lives at the website root. Other locales use `zh-Hans/`, `zh-Hant/`, `ja/`, `ko/`, `es/`, `fr/`, `de/`, `pt/`, `ar/`, `hi/`, and `ru/`. Arabic pages use `dir="rtl"`. Language switching keeps the current page type. Old `?lang=` links redirect to physical locale pages. Browser language or local storage does not rewrite canonical URLs or the main page content. Old `how_to_use.html` pages redirect to localized help, are marked noindex, and are excluded from the sitemap.
 
 ## Publication and Search Console
 
@@ -47,7 +47,7 @@ The iPhone/iPad app and Chrome extension have public store listings, verified on
 
 `brand-system/README.md` records the Search Desk identity, content boundaries, approved icon provenance, accessibility rules and static HTML component guidelines. `brand-system/tokens.json` is the source for shared colors, typography, spacing and radii; the build emits `assets/brand-tokens.css` and fingerprints it with the other frontend files. No external font, UI framework or custom analytics dependency was added.
 
-The homepage pairs a benefit-first introduction with the working query tool; mobile layouts stack them and keep navigation scrollable within its own region. Privacy information stays available through the native disclosure and the full privacy page. Website local translation and extension online translation remain distinct. Existing 11-language routes, 77 canonicals, consent choices and official Cloudflare Web Analytics are preserved.
+The homepage pairs a benefit-first introduction with the working query tool; mobile layouts stack them and keep navigation scrollable within its own region. Privacy information stays available through the native disclosure and the full privacy page. Website local translation and extension online translation remain distinct. Existing 12-language routes, 84 canonicals, consent choices and official Cloudflare Web Analytics are preserved.
 
 `website-design/` is an ignored local Design Component draft with an installed token snapshot. It is not deployed. The current tool connection does not expose `design_check`, `design_system_check` or asset-import capabilities, so these local artifacts have not been validated by those dedicated tools and no editor-card availability is claimed. Production validation uses the website build, SEO validator, functional tests, contrast calculations and Chrome rendering/interaction checks.
 

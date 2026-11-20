@@ -9,5 +9,6 @@
   {"lang":"de","hrefLang":"de","prefix":"de/","label":"Deutsch"},
   {"lang":"pt","hrefLang":"pt","prefix":"pt/","label":"Português"},
   {"lang":"ar","hrefLang":"ar","prefix":"ar/","label":"العربية","dir":"rtl"},
-  {"lang":"hi","hrefLang":"hi","prefix":"hi/","label":"हिन्दी"}
+  {"lang":"hi","hrefLang":"hi","prefix":"hi/","label":"हिन्दी"},
+  {"lang":"ru","hrefLang":"ru","prefix":"ru/","label":"Русский"}
 ]

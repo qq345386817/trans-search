@@ -34,6 +34,7 @@ The iPhone/iPad companion app is available on the App Store, and the Chrome exte
 - [Português](https://trans-search.luopeike.com/pt/)
 - [العربية](https://trans-search.luopeike.com/ar/)
 - [हिन्दी](https://trans-search.luopeike.com/hi/)
+- [Русский](https://trans-search.luopeike.com/ru/)
 
 ## Source
 

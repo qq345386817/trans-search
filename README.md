@@ -19,7 +19,8 @@ The tool defaults to browser on-device translation using the Translator and Lang
 - `translations.js`: English, Simplified Chinese, and Traditional Chinese source copy.
 - `locales/*.json` / `site-locales.json`: nine additional complete locales and the shared locale registry, including Arabic RTL.
 - `site-pages.json`: indexable pages, including technical and learning use cases.
-- `search-core.js` / `search.js`: query translation and browser interactions.
+- `search-core.js` / `search.js`: translate and edit queries, then open results in one of eight search engines.
+- `site-ui.js`: connects the homepage demos to the workbench and handles navigation between steps.
 - `scripts/build-site.mjs`: renders 84 canonical pages across 12 locales and 12 legacy help redirects, metadata, canonical links, reciprocal hreflang, structured data, sitemap, robots.txt, and llms.txt.
 - `scripts/validate-site.mjs`: validates the generated site without running page JavaScript.
 - `scripts/page-lastmod.json`: content hashes and actual generation dates; unchanged pages retain their lastmod on repeated builds.

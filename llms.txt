@@ -2,7 +2,7 @@
 
 > An online search-query translation tool and a browser-extension project for cross-language search.
 
-The website defaults to browser on-device translation where supported. Users can explicitly choose Google online translation. It lets the user edit the translation, and opens Google, Bing, Baidu, or Sogou in a separate tab. It does not translate entire results pages or guarantee better results. No account or saved query-history database is used. Local translation does not upload query text. Online translation and searches send queries to the chosen providers. The website retains official Cloudflare Web Analytics for visits and page performance. No custom app or extension usage tracking is added; hosting network and security logs may exist.
+The website defaults to browser on-device translation where supported. Users can explicitly choose Google online translation. It lets the user edit the translation, and opens Google, Bing, Baidu, Sogou, DuckDuckGo, Naver, Brave Search, or Yandex in a separate tab. It does not translate entire results pages or guarantee better results. No account or saved query-history database is used. Local translation does not upload query text. Online translation and searches send queries to the chosen providers. The website retains official Cloudflare Web Analytics for visits and page performance. No custom app or extension usage tracking is added; hosting network and security logs may exist.
 
 The iPhone/iPad companion app is available on the App Store, and the Chrome extension is available on the Chrome Web Store. Website store links were verified on 2026-10-25. The extension can automatically or manually translate queries on supported search results pages; the companion Apple app helps enable the Safari extension.
 

@@ -104,8 +104,11 @@ if (form) {
     query.value = button.dataset.exampleQuery;
     source.value = button.dataset.sourceLanguage || 'auto';
     target.value = button.dataset.targetLanguage || 'en';
-    invalidate();
-    query.focus();
+    query.dispatchEvent(new Event('input', { bubbles: true }));
+    query.focus({ preventScroll: button.hasAttribute('data-load-example') });
+    if (button.hasAttribute('data-load-example')) {
+      document.getElementById('search-tool').scrollIntoView({ block: 'start' });
+    }
   }));
 
   const example = new URLSearchParams(location.search).get('example');

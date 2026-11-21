@@ -33,6 +33,15 @@ for(const url of urls){
  if (!locale) throw new Error('Unknown page language');
  if (file.endsWith('index.html')) {
   const messages=JSON.parse($('#tool-copy').text()); for(const key of ['translate_button','local_note','failed_local','model_download'])if(!messages[key])throw new Error('Missing runtime tool copy '+file+':'+key);
+  $('[data-stage-panel]').each((_, panel) => {
+    const sample = $(panel).find('[data-load-example]');
+    const text = $(panel).find('.flow-card--source .flow-query').text();
+    const direction = $(panel).find('.lang-chip').text().toLowerCase().split(' → ');
+    if (!text || sample.attr('data-example-query') !== text ||
+        sample.attr('data-source-language') !== direction[0] || sample.attr('data-target-language') !== direction[1]) {
+      throw new Error('Demo and workbench example do not match in ' + file);
+    }
+  });
   if ($('#translation-mode').val()!=='local') throw new Error('Local translation must be the default');
  }
  $('script[type="application/ld+json"]').each((_,node)=>JSON.parse($(node).text()));

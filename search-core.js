@@ -2,6 +2,10 @@ export const SEARCH_ENGINES = Object.freeze({
   google: { label: 'Google', url: 'https://www.google.com/search', parameter: 'q' },
   bing: { label: 'Bing', url: 'https://www.bing.com/search', parameter: 'q' },
   baidu: { label: 'Baidu', url: 'https://www.baidu.com/s', parameter: 'wd' },
+  duckduckgo: { label: 'DuckDuckGo', url: 'https://duckduckgo.com/', parameter: 'q' },
+  naver: { label: 'Naver', url: 'https://search.naver.com/search.naver', parameter: 'query' },
+  brave: { label: 'Brave Search', url: 'https://search.brave.com/search', parameter: 'q' },
+  yandex: { label: 'Yandex', url: 'https://yandex.com/search/', parameter: 'text' },
   sogou: { label: 'Sogou', url: 'https://www.sogou.com/web', parameter: 'query' },
 });
 

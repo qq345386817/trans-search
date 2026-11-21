@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildSearchUrl, parseTranslation, translateQuery } from '../search-core.js';
 
-for (const [engine,param] of [['google','q'],['bing','q'],['baidu','wd'],['sogou','query']]) {
+for (const [engine,param] of [['google','q'],['bing','q'],['baidu','wd'],['sogou','query'],['duckduckgo','q'],['naver','query'],['brave','q'],['yandex','text']]) {
  test(`${engine} preserves literal search syntax`,()=>{
   const query='"OAuth 2.0" C++ 100% 跨语言';const url=new URL(buildSearchUrl(engine,query));
   assert.equal(url.protocol,'https:');assert.equal(url.searchParams.get(param),query);
